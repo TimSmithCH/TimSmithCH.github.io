@@ -46,23 +46,23 @@
               center: [6.118484, 46.283021], // starting position
               zoom: 11 // starting zoom
             });
+            // Draw the route as the crow flies.
+            var origin = [6.045312881469727, 46.2324295417903];
+            var destination = [6.194186210632324, 46.33150612577162];
+            var route = {
+              "type": "FeatureCollection",
+              "features": [{
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    origin,
+                    destination
+                  ]
+                }
+              }]
+            }
           </script>
-          // Draw the route as the crow flies.
-          var origin = [6.045312881469727, 46.2324295417903];
-          var destination = [6.194186210632324, 46.33150612577162];
-          var route = {
-            "type": "FeatureCollection",
-            "features": [{
-              "type": "Feature",
-              "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                  origin,
-                  destination
-                ]
-              }
-            }]
-          }
         </div>
       </div>
     </div>
