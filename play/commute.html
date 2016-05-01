@@ -46,22 +46,35 @@
               center: [6.118484, 46.283021], // starting position
               zoom: 11 // starting zoom
             });
-            // Draw the route as the crow flies.
-            var origin = [6.045312881469727, 46.2324295417903];
-            var destination = [6.194186210632324, 46.33150612577162];
-            var route = {
-              "type": "FeatureCollection",
-              "features": [{
-                "type": "Feature",
-                "geometry": {
-                  "type": "LineString",
-                  "coordinates": [
-                    origin,
-                    destination
-                  ]
+            map.on('load', function () {
+              map.addSource("route", {
+                "type": "geojson",
+                "data": {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                   "type": "LineString",
+                   "coordinates": [
+                     [6.045312881469727, 46.2324295417903],
+                     [6.194186210632324, 46.33150612577162]
+                    ]
+                  }
                 }
-              }]
-            }
+              });
+            map.addLayer({
+              "id": "route",
+              "type": "line",
+              "source": "route",
+              "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+              },
+              "paint": {
+                "line-color": "#888",
+                "line-width": 8
+              }
+            });
+          });
           </script>
         </div>
       </div>
