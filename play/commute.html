@@ -46,6 +46,8 @@
               center: [6.118484, 46.283021], // starting position
               zoom: 11 // starting zoom
             });
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.Navigation());
             map.on('load', function () {
               map.addSource("route", {
                 "type": "geojson",
@@ -62,6 +64,25 @@
                 "paint": {
                   "line-color": "yellow",
                   "line-width": 5
+                }
+              });
+              map.addSource('contours', {
+                "type": "vector",
+                "url": "mapbox://mapbox.mapbox-terrain-v2"
+              });
+              map.addLayer({
+               'id': 'contours',
+               'type': 'line',
+               'source': 'contours',
+               'source-layer': 'contour',
+               'layout': {
+                 'visibility': 'visible',
+                 'line-join': 'round',
+                 'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': '#877b59',
+                  'line-width': 1
                 }
               });
             });
