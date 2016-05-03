@@ -1,0 +1,16 @@
+{ "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [6.120340,46.311665]
+    },
+    "properties": {
+      "marker-color": "orange",
+      "marker-symbol": "11",
+      "marker-size": "large",
+      "title": "11",
+      "description": "A border marker"
+    }
+  }]
+}
