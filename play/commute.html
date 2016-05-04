@@ -66,6 +66,19 @@
                   "line-width": 5
                 }
               });
+              map.addSource("border", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/play/commute_border.geojson"
+              });
+              map.addLayer({
+                "id": "border",
+                "type": "symbol",
+                "source": "border",
+                "layout": {
+                  "icon-image": "{marker-symbol}-15",
+                  "text-field": "{title}",
+                },
+              });
               map.addSource('contours', {
                 "type": "vector",
                 "url": "mapbox://mapbox.mapbox-terrain-v2"
