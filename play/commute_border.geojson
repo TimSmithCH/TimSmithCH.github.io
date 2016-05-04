@@ -7,7 +7,7 @@
     },
     "properties": {
       "marker-color": "orange",
-      "marker-symbol": "11",
+      "marker-symbol": "rocket",
       "marker-size": "large",
       "title": "11",
       "description": "A border marker"
