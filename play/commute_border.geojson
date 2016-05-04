@@ -6,9 +6,7 @@
       "coordinates": [6.120340,46.311665]
     },
     "properties": {
-      "marker-color": "orange",
       "marker-symbol": "default_marker",
-      "marker-size": "large",
       "title": "11",
       "description": "A border marker"
     }
