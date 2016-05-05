@@ -72,19 +72,20 @@
               });
               map.addLayer({
                 "id": "border",
-                "type": "symbol",
+                "type": "circle",
                 "source": "border",
                 "layout": {
-                  "icon-image": "{marker-symbol}-15",
+                  //"icon-image": "{marker-symbol}-15",
                   "text-field": "{title}",
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
-                }
-                //"paint": {
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"]
+                  //"text-offset": [0, 0.6],
+                  //"text-anchor": "top"
+                },
+                "paint": {
                 //  "text-size": 14
-                //  "marker-color": "{marker-color}"
-                //}
+                  "circle-color": "{circle-color}",
+                  "circle-radius": "70"
+                }
               });
               map.addSource('contours', {
                 "type": "vector",
