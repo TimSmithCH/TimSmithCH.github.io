@@ -113,7 +113,7 @@
         ]
       },
       "properties": {
-        "linecolor": "green",
+        "linecolor": "#00FF00"
       }
     },
     { "type": "Feature",
@@ -148,7 +148,7 @@
         ]
       },
       "properties": {
-        "linecolor": "red",
+        "linecolor": "#FF0000"
       }
     },
     { "type": "Feature",
@@ -269,7 +269,7 @@
         ]
       },
       "properties": {
-        "linecolor": "blue",
+        "linecolor": "#0000FF"
       }
     },
     { "type": "Feature",
@@ -369,7 +369,7 @@
         ]
       },
       "properties": {
-        "linecolor": "pink",
+        "linecolor": "#CC00CC"
       }
     },
     { "type": "Feature",
@@ -398,7 +398,7 @@
         ]
       },
       "properties": {
-        "linecolor": "purple",
+        "linecolor": "#660066"
       }
     },
     { "type": "Feature",
@@ -418,7 +418,7 @@
         ]
       },
       "properties": {
-        "linecolor": "orange",
+        "linecolor": "#FF8000"
       }
     },
     { "type": "Feature",
@@ -430,7 +430,7 @@
         ]
       },
       "properties": {
-        "linecolor": "orange",
+        "linecolor": "#FF8000"
       }
     },
     { "type": "Feature",
@@ -483,25 +483,8 @@
         ]
       },
       "properties": {
-        "linecolor": "orange",
+        "linecolor": "#FF8000"
       }
     }
   ]
 }
-
-    map.addLayer({
-        "id": "markers",
-        "type": "symbol",
-        "source": "markers",
-        "layout": {
-            "icon-image": "{marker-symbol}-15",
-            "text-field": "{title}",
-            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-            "text-offset": [0, 0.6],
-            "text-anchor": "top"
-        }
-        "paint": {
-            "line-color": "linecolor",
-            "line-width": 8
-        }
-    });
