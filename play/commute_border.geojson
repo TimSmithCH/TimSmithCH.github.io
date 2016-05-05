@@ -8,6 +8,7 @@
     "properties": {
       "marker-symbol": "marker",
       "title": "2",
+      "marker-color": "green",
       "description": "A border marker"
     }
   }, {
@@ -19,7 +20,7 @@
     "properties": {
       "marker-symbol": "marker",
       "title": "3",
-      "marker-color": "#bbb"
+      "marker-color": "red"
     }
   }, {
     "type": "Feature",
@@ -30,7 +31,7 @@
     "properties": {
       "marker-symbol": "marker",
       "title": "4",
-      "marker-color": "#ff8888"
+      "marker-color": "yellow"
     }
   }]
 }
