@@ -51,18 +51,35 @@
             map.on('load', function () {
               map.addSource("route", {
                 "type": "geojson",
-                "data": "http://timsmithch.github.io/play/commute_routes.geojson"
+                "data": "http://timsmithch.github.io/play/commute_crow.geojson"
               });
               map.addLayer({
-                "id": "route",
+                "id": "crow",
                 "type": "line",
-                "source": "route",
+                "source": "crow",
                 "layout": {
                   "line-join": "round",
                   "line-cap": "round"
                 },
                 "paint": {
                   "line-color": "yellow",
+                  "line-width": 5
+                }
+              });
+              map.addSource("routes", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/play/commute_routes.geojson"
+              });
+              map.addLayer({
+                "id": "routes",
+                "type": "line",
+                "source": "routes",
+                "layout": {
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "{line-color}",
                   "line-width": 5
                 }
               });
