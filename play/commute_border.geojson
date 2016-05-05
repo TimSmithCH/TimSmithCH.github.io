@@ -29,7 +29,7 @@
     },
     "properties": {
       "marker-symbol": "harbor",
-      "title": "harbor"
+      "title": "harbor",
       "marker-color": "#ff8888"
     }
   }]
