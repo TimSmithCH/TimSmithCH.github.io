@@ -6,9 +6,29 @@
       "coordinates": [6.120340,46.311665]
     },
     "properties": {
-      "marker-symbol": "default_marker",
+      "marker-symbol": "marker",
       "title": "11",
       "description": "A border marker"
+    }
+  }, {
+    "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.119653,46.294781]
+    },
+    "properties": {
+      "marker-symbol": "rocket",
+      "title": "rocket"
+    }
+  }, {
+    "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.114712,46.294407]
+    },
+    "properties": {
+      "marker-symbol": "harbor",
+      "title": "harbor"
     }
   }]
 }
