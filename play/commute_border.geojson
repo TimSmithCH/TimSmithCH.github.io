@@ -7,7 +7,7 @@
     },
     "properties": {
       "marker-symbol": "marker",
-      "title": "11",
+      "title": "2",
       "description": "A border marker"
     }
   }, {
@@ -17,8 +17,8 @@
         "coordinates": [6.119653,46.294781]
     },
     "properties": {
-      "marker-symbol": "rocket",
-      "title": "rocket",
+      "marker-symbol": "marker",
+      "title": "3",
       "marker-color": "#bbb"
     }
   }, {
@@ -28,8 +28,8 @@
         "coordinates": [6.114712,46.294407]
     },
     "properties": {
-      "marker-symbol": "harbor",
-      "title": "harbor",
+      "marker-symbol": "marker",
+      "title": "4",
       "marker-color": "#ff8888"
     }
   }]
