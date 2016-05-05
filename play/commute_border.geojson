@@ -18,7 +18,8 @@
     },
     "properties": {
       "marker-symbol": "rocket",
-      "title": "rocket"
+      "title": "rocket",
+      "marker-color": "#bbb"
     }
   }, {
     "type": "Feature",
@@ -29,6 +30,7 @@
     "properties": {
       "marker-symbol": "harbor",
       "title": "harbor"
+      "marker-color": "#ff8888"
     }
   }]
 }
