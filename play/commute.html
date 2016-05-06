@@ -107,6 +107,24 @@
                   //"icon-color": "#FF0000"
                 }
               });
+              // The pre-1963 border
+              map.addSource("old_border", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/play/commute_border_old.geojson"
+              });
+              map.addLayer({
+                "id": "old_border",
+                "type": "line",
+                "source": "old_border",
+                "layout": {
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "blue",
+                  "line-width": 4
+                }
+              });
               // And some height information
               map.addSource('contours', {
                 "type": "vector",
