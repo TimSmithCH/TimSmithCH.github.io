@@ -378,7 +378,8 @@
     },
     "properties": {
       "title": "38",
-      "marker-symbol": "water"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -388,7 +389,8 @@
     },
     "properties": {
       "title": "39",
-      "marker-symbol": "water"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -398,7 +400,8 @@
     },
     "properties": {
       "title": "40",
-      "marker-symbol": "water"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -408,7 +411,8 @@
     },
     "properties": {
       "title": "41",
-      "marker-symbol": "water",
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00",
       "description": "New marker not verified"
     }
   }, {
@@ -419,7 +423,8 @@
     },
     "properties": {
       "title": "42",
-      "marker-symbol": "water",
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00",
       "description": "New marker not verified"
     }
   }, {
