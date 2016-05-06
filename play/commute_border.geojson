@@ -431,6 +431,7 @@
     "properties": {
       "title": "43",
       "marker-symbol": "star",
+      "marker-color": "#FF0000",
       "description": "1818 (moved in ?? when border moved?)"
     }
   }, {
@@ -602,6 +603,7 @@
     "properties": {
       "title": "58",
       "marker-symbol": "star",
+      "marker-color": "#FF0000",
       "description": "Hors service (to be checked)"
     }
   }, {
@@ -754,6 +756,7 @@
     "properties": {
       "title": "72",
       "marker-symbol": "star",
+      "marker-color": "#FF0000",
       "description": "Hors service (to be checked)"
     }
   }, {
