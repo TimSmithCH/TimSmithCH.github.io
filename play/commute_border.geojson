@@ -541,7 +541,8 @@
     },
     "properties": {
       "title": "52",
-      "marker-symbol": "water",
+      "marker-symbol": "triangle",
+      "marker-color": "#00FF00",
       "description": "1965"
     }
   }, {
@@ -602,7 +603,7 @@
     },
     "properties": {
       "title": "58",
-      "marker-symbol": "star",
+      "marker-symbol": "monument",
       "marker-color": "#FF0000",
       "description": "Hors service (to be checked)"
     }
@@ -755,7 +756,7 @@
     },
     "properties": {
       "title": "72",
-      "marker-symbol": "star",
+      "marker-symbol": "monument",
       "marker-color": "#FF0000",
       "description": "Hors service (to be checked)"
     }
