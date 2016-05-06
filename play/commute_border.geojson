@@ -681,7 +681,8 @@
     },
     "properties": {
       "title": "63",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -691,7 +692,8 @@
     },
     "properties": {
       "title": "64",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -701,7 +703,8 @@
     },
     "properties": {
       "title": "65",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -711,7 +714,8 @@
     },
     "properties": {
       "title": "66",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -721,7 +725,8 @@
     },
     "properties": {
       "title": "67",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -731,7 +736,8 @@
     },
     "properties": {
       "title": "68",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -741,7 +747,8 @@
     },
     "properties": {
       "title": "69",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -751,7 +758,8 @@
     },
     "properties": {
       "title": "70",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -761,7 +769,8 @@
     },
     "properties": {
       "title": "71",
-      "marker-symbol": "marker"
+      "marker-symbol": "harbor",
+      "marker-color": "#00FF00"
     }
   }, {
     "type": "Feature",
@@ -1314,7 +1323,7 @@
     },
     "properties": {
       "title": "123",
-      "marker-symbol": "marker",
+      "marker-symbol": "harbor",
       "marker-color": "#00FF00",
       "description": "1974  1818"
     }
