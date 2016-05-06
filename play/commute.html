@@ -108,14 +108,14 @@
                 }
               });
               // The pre-1963 border
-              map.addSource("old_border", {
+              map.addSource("oldborder", {
                 "type": "geojson",
                 "data": "http://timsmithch.github.io/play/commute_border_old.geojson"
               });
               map.addLayer({
-                "id": "old_border",
+                "id": "oldborder",
                 "type": "line",
-                "source": "old_border",
+                "source": "oldborder",
                 "layout": {
                   "line-join": "round",
                   "line-cap": "round"
