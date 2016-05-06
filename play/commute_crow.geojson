@@ -1,16 +1,15 @@
 ﻿{ "type": "FeatureCollection",
-  "features": [
-    { "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [6.045312881469727, 46.2324295417903],
-          [6.194186210632324, 46.33150612577162]
-        ]
-      },
-      "properties": {
-        "line-color": "#FFFF00"
-      }
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [6.045312881469727, 46.2324295417903],
+        [6.194186210632324, 46.33150612577162]
+      ]
+    },
+    "properties": {
+      "line-color": "#FFFF00"
     }
-  ]
+  }]
 }
