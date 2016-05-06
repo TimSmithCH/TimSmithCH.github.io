@@ -49,7 +49,8 @@
             // Add zoom and rotation controls to the map.
             map.addControl(new mapboxgl.Navigation());
             map.on('load', function () {
-              map.addSource("route", {
+              // The direct route, as the crow flies
+              map.addSource("crow", {
                 "type": "geojson",
                 "data": "http://timsmithch.github.io/play/commute_crow.geojson"
               });
@@ -66,6 +67,7 @@
                   "line-width": 5
                 }
               });
+              // The route options
               map.addSource("routes", {
                 "type": "geojson",
                 "data": "http://timsmithch.github.io/play/commute_routes.geojson"
@@ -83,6 +85,7 @@
                   "line-width": 5
                 }
               });
+              // The POIs: border markers
               map.addSource("border", {
                 "type": "geojson",
                 "data": "http://timsmithch.github.io/play/commute_border.geojson"
@@ -103,6 +106,7 @@
                   "text-color": "#877b59"
                 }
               });
+              // And some height information
               map.addSource('contours', {
                 "type": "vector",
                 "url": "mapbox://mapbox.mapbox-terrain-v2"
