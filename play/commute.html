@@ -34,10 +34,25 @@
       </div>
     </header>
 
+    <style>
+      #menu {
+        position: absolute;
+        background: #fff;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+
     <div class="page-content">
       <div class="home">
         <div class="wrapper">
           <div id='map' style='width: 650px; height: 650px;'></div>
+          <div id='menu'>
+            <input id='routes' type='radio' name='rtoggle' value='routes' checked='checked'>
+            <label for='routes'>routes</label>
+            <input id='border' type='radio' name='rtoggle' value='border'>
+            <label for='border'>border</label>
+          </div>
           <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
