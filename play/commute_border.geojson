@@ -430,7 +430,7 @@
     },
     "properties": {
       "title": "43",
-      "marker-symbol": "mountain",
+      "marker-symbol": "star",
       "description": "1818 (moved in ?? when border moved?)"
     }
   }, {
@@ -601,7 +601,7 @@
     },
     "properties": {
       "title": "58",
-      "marker-symbol": "mountain",
+      "marker-symbol": "star",
       "description": "Hors service (to be checked)"
     }
   }, {
@@ -753,7 +753,7 @@
     },
     "properties": {
       "title": "72",
-      "marker-symbol": "mountain",
+      "marker-symbol": "star",
       "description": "Hors service (to be checked)"
     }
   }, {
