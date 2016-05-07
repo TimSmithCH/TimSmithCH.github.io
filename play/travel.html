@@ -52,12 +52,12 @@
             // Add zoom and rotation controls to the map.
             map.addControl(new mapboxgl.Navigation());
             
-            map.on('load', function () {
+            //map.on('load', function () {
               // The direct route, as the crow flies
-              map.addSource("visited", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/play/countries_visited.geojson"
-              });
+              //map.addSource("visited", {
+              //  "type": "geojson",
+              //  "data": "http://timsmithch.github.io/play/countries_visited.geojson"
+              //});
               //map.addLayer({
               //  "id": "visited",
               //  "type": "fill",
@@ -66,7 +66,7 @@
               //    "fill-color": "yellow"
               //  }
               //});
-            }
+            //}
           </script>
           
           <p></p>
