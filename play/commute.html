@@ -40,9 +40,9 @@
         position: absolute;
         z-index: 1;
         top: 10px;
-        left: 10px;
+        right: 10px;
         border-radius: 3px;
-        width: 80px;
+        width: 120px;
         border: 1px solid rgba(0,0,0,0.4);
         font-family: 'Open Sans', sans-serif;
       }
@@ -82,6 +82,7 @@
       <div class="home">
         <div class="wrapper">
           <h1>Commuting Routes</h1>
+          <nav id="menu"></nav>
           <div id='map' style='width: 700px; height: 650px;'></div>
 
           <script>
@@ -94,7 +95,7 @@
             });
             
             // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.Navigation());
+            //map.addControl(new mapboxgl.Navigation());
             
             map.on('load', function () {
               // The direct route, as the crow flies
