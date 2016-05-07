@@ -53,7 +53,7 @@
             map.addControl(new mapboxgl.Navigation());
             
             map.on('load', function () {
-              // The direct route, as the crow flies
+              // Scan full data file for countries where I've modified the note_adm0 field to "visited"
               map.addSource("visited", {
                 "type": "geojson",
                 //"data": "http://timsmithch.github.io/play/countries_visited.geojson"
@@ -63,6 +63,7 @@
                 "id": "visited",
                 "type": "fill",
                 "source": "visited",
+                "filter": ["==", "note_adm0", "visited"],
                 "paint": {
                   "fill-color": "yellow",
                   "fill-opacity": 0.5
