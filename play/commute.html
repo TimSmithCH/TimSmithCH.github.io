@@ -209,7 +209,12 @@
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
-              link.className = 'active';
+              var tempvis = map.getLayoutProperty(id, 'visibility');
+              if (tempvis === 'visible') {
+                link.className = '';
+              } else {
+                link.className = 'active';
+              }
               link.textContent = name;
               link.onclick = function (e) {
                 e.preventDefault();
