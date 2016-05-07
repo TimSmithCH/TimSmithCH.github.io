@@ -508,7 +508,7 @@
         "stroke": "#FFFF80"
       }
     },
-        { "type": "Feature",
+    { "type": "Feature",
       "geometry": {
         "type": "LineString",
         "coordinates": [
