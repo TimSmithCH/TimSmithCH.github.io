@@ -95,7 +95,7 @@
             });
             
             // Add zoom and rotation controls to the map.
-            //map.addControl(new mapboxgl.Navigation());
+            map.addControl(new mapboxgl.Navigation());
             
             map.on('load', function () {
               // The direct route, as the crow flies
@@ -203,7 +203,7 @@
               });
             });
             toggleLayer('Routes', 'routes');
-            toggleLayer('Border Pos', 'border');
+            toggleLayer('Border Stones', 'border');
             toggleLayer('Old Border', 'oldborder');
 
             function toggleLayer(name, id) {
@@ -229,7 +229,7 @@
           </script>
           <p></p>
           <h1>Further Reading</h1>
-          Some links
+          <p>Some links</p>
         </div>
       </div>
     </div>
