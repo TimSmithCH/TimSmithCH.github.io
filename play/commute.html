@@ -171,7 +171,7 @@
                 "type": "line",
                 "source": "oldborder",
                 "layout": {
-                  "visibility": "visible",
+                  "visibility": "none",
                   "line-join": "round",
                   "line-cap": "round"
                 },
@@ -202,9 +202,9 @@
                 }
               });
             });
-            toggleLayer('Routes', 'routes');
-            toggleLayer('Border Stones', 'border');
-            toggleLayer('Old Border', 'oldborder');
+            toggleLayer("Routes", "routes");
+            toggleLayer("Border Stones", "border");
+            toggleLayer("Old Border", "oldborder");
 
             function toggleLayer(name, id) {
               var link = document.createElement('a');
@@ -229,7 +229,15 @@
           </script>
           <p></p>
           <h1>Further Reading</h1>
-          <p>Some links</p>
+          <h2>CERN's cycle to work challenges:</h2>
+         	<ul class="plain">
+            <li>Social: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">2016</a></li>
+            <li>Endomondo: <a href="http://www.endomondo.com/challenges/19490660">2015</a>, 
+              <a href="http://www.endomondo.com/challenges/13560565">2014</a>, 
+              <a href="http://www.endomondo.com/challenges/7839049">2013</a>, 
+              <a href="http://www.endomondo.com/challenges/3626399">2012</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
