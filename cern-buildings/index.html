@@ -1,8 +1,8 @@
 <p>Use the overpass DB of OSM data. Using the API, identify all "ways" within a bounding box that roughly surrounds CERN:
 
-http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22][%22name%22=%22281%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
+http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
 
-Can also chain this to visualise maps:
+Can also chain such a call to visualise maps:
 http://overpass-api.de/api/interpreter?data=[out:custom];way[%22building%22=%22yes%22][%22name%22=%22281%22](46.2292395,%206.0338419,46.2385931,6.0570547);out;&url=http://www.openstreetmap.org/?{{{type}}}={{{id}}}
 
 </p>
