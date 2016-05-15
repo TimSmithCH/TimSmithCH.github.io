@@ -1,4 +1,40 @@
-<p>Use the overpass DB of OSM data. Using the API, identify all "ways" within a bounding box that roughly surrounds CERN:
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tim Smith</title>
+    <meta name="description" content="A home page for Tim">
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <a href="/" class="logo">
+          <img src="/assets/logo.png" alt="Tim">
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link"><a href="/work/">Work</a>
+            <li class="nav-link"><a href="/commute/">Commute</a>
+            <li class="nav-link"><a href="/play/">Play</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="home">
+        <div class="wrapper">
+          <p>Use the overpass DB of OSM data. Using the API, identify all "ways" within a bounding box that roughly surrounds CERN:
 
 http://overpass-api.de/api/interpreter?data=[out:json];way[%22building%22=%22yes%22](46.2292395,%206.0338419,46.2385931,6.0570547);out%20meta;
 
@@ -9,3 +45,9 @@ Output to a file called "buildings_in_CERN_bb.json"
 Run build_osm_mappings.py on it to strip out just the building number-osm id pairs
 
 </p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
