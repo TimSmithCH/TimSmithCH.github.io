@@ -203,6 +203,7 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
+                  map.fitBounds(id.getBounds());
                 }
               };
               var layers = document.getElementById('menu');
