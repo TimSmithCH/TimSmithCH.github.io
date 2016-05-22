@@ -109,7 +109,7 @@
                 }
               });
 
-              // CERN Myerin site
+              // CERN Prevessin site
               map.addSource("prevessin", {
                 "type": "geojson",
                 "data": "http://timsmithch.github.io/cern/CERN_Prevessin.geojson"
@@ -120,6 +120,21 @@
                 "source": "prevessin",
                 "paint": {
                   "fill-color": "yellow",
+                  "fill-opacity": 0.5
+                }
+              });
+
+              // CERN Accelerators
+              map.addSource("accel", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/cern/CERN_Accelerators.geojson"
+              });
+              map.addLayer({
+                "id": "accel",
+                "type": "fill",
+                "source": "accel",
+                "paint": {
+                  "fill-color": "blue",
                   "fill-opacity": 0.5
                 }
               });
