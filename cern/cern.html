@@ -109,50 +109,22 @@
                 }
               });
 
-              // The route options
-              map.addSource("routes", {
+              // CERN Myerin site
+              map.addSource("prevessin", {
                 "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_routes.geojson"
+                "data": "http://timsmithch.github.io/cern/CERN_Prevessin.geojson"
               });
               map.addLayer({
-                "id": "routes",
-                "type": "line",
-                "source": "routes",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
+                "id": "prevessin",
+                "type": "fill",
+                "source": "prevessin",
                 "paint": {
-                  "line-color": "red",
-                  "line-width": 4
+                  "fill-color": "yellow",
+                  "fill-opacity": 0.5
                 }
               });
-              
-              // The POIs: border markers
-              map.addSource("border", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_border.geojson"
-              });
-              map.addLayer({
-                "id": "border",
-                "type": "symbol",
-                "source": "border",
-                "layout": {
-                  "visibility": "visible",
-                  "icon-image": "{marker-symbol}-15",
-                  "text-field": "GE-{title}",
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-size": 12,
-                  "text-offset": [0, 0.8],
-                  "text-anchor": "top"
-                },
-                "paint": {
-                  "text-color": "#877b59"
-                  //"icon-color": "#FF0000"
-                }
-              });
- 
+
+            });
             toggleLayer("Meyrin", "meyrin");
             toggleLayer("Prevessin", "prevessin");
             toggleLayer("LHC", "lhc");
