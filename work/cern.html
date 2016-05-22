@@ -34,22 +34,195 @@
       </div>
     </header>
 
+    <style>
+      #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+        border-radius: 3px;
+        width: 100px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+      }
+      #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+      }
+      #menu a:last-child {
+        border: none;
+      }
+      #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+      }
+      #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+      }
+      #menu a.active:hover {
+        background: #3074a4;
+      }
+    </style>
+
     <div class="page-content">
       <div class="home">
         <div class="wrapper">
-          <h1>Open Science</h1>
-          
-          <h1>Open Data</h1>
-          
-          <h1>Open Access</h1>
-          
-          <h1>Open Source</h1>
-          
-          <h1>Big Data</h1>
-          <h1>Grid Computing</h1>
-          <h1>Computer Farms</h1>
-          <h1>Search for SUSY</h1>
-          <h1>Electroweak Studies</h1>
+          <h1>Commuting Routes</h1>
+          <div id='map' style='width: 728px; height: 550px;'>
+            <nav id="menu"></nav>
+          </div>
+
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+              //style: 'mapbox://styles/mapbox/outdoors-v9', //stylesheet location
+              center: [6.118484, 46.283021], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.Navigation());
+            
+            map.on('load', function () {
+              // The direct route, as the crow flies
+              map.addSource("meyrin", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/assets/CERN_Meyrin.geojson"
+              });
+              map.addLayer({
+                "id": "meyrin",
+                "type": "line",
+                "source": "crow",
+                "layout": {
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "yellow",
+                  "line-width": 4
+                }
+              });
+              
+              // The route options
+              map.addSource("routes", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/commute/commute_routes.geojson"
+              });
+              map.addLayer({
+                "id": "routes",
+                "type": "line",
+                "source": "routes",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "red",
+                  "line-width": 4
+                }
+              });
+              
+              // The POIs: border markers
+              map.addSource("border", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/commute/commute_border.geojson"
+              });
+              map.addLayer({
+                "id": "border",
+                "type": "symbol",
+                "source": "border",
+                "layout": {
+                  "visibility": "visible",
+                  "icon-image": "{marker-symbol}-15",
+                  "text-field": "GE-{title}",
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-size": 12,
+                  "text-offset": [0, 0.8],
+                  "text-anchor": "top"
+                },
+                "paint": {
+                  "text-color": "#877b59"
+                  //"icon-color": "#FF0000"
+                }
+              });
+              
+              // The pre-1963 border
+              map.addSource("oldborder", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/commute/commute_border_old.geojson"
+              });
+              map.addLayer({
+                "id": "oldborder",
+                "type": "line",
+                "source": "oldborder",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "#6495ED",
+                  "line-width": 2
+                }
+              });
+              
+              // And some height information
+              map.addSource('contours', {
+                "type": "vector",
+                "url": "mapbox://mapbox.mapbox-terrain-v2"
+              });
+              map.addLayer({
+               'id': 'contours',
+               'type': 'line',
+               'source': 'contours',
+               'source-layer': 'contour',
+               'layout': {
+                 'visibility': 'visible',
+                 'line-join': 'round',
+                 'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': '#877b59',
+                  'line-width': 1
+                }
+              });
+            });
+            toggleLayer("Routes", "routes");
+            toggleLayer("Border Stones", "border");
+            toggleLayer("Old Border", "oldborder");
+            function toggleLayer(name, id) {
+              var link = document.createElement('a');
+              link.href = '#';
+              link.className = 'active';
+              link.textContent = name;
+              link.onclick = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var visibility = map.getLayoutProperty(id, 'visibility');
+                if (visibility === 'visible') {
+                  map.setLayoutProperty(id, 'visibility', 'none');
+                  this.className = '';
+                } else {
+                  this.className = 'active';
+                  map.setLayoutProperty(id, 'visibility', 'visible');
+                }
+              };
+              var layers = document.getElementById('menu');
+              layers.appendChild(link);
+            }
+          </script>
+
         </div>
       </div>
     </div>
