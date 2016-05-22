@@ -211,12 +211,12 @@
             
             searchInput.addEventListener('keyup', function(e) {
               var value = e.target.value.trim().toLowerCase();
-              layerIDs.forEach(function(layerID) {
-              map.setLayoutProperty(layerID, 'visibility',
-                layerID.indexOf(value) > -1 ? 'visible' : 'none');
+//              layerIDs.forEach(function(layerID) {
+//                map.setLayoutProperty(layerID, 'visibility',
+//                  layerID.indexOf(value) > -1 ? 'visible' : 'none');
 //              map.flyTo({center: features[0].geometry.coordinates});
 //              map.fitBounds(meyrin.getBounds());
-              });
+//              });
             });
           </script>
 
