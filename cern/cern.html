@@ -75,7 +75,7 @@
         position: absolute;
         bottom: 10px;
         left: 10px;
-        z-index: 1;
+        z-index: 2;
         width: 180px;
       }
       .filter-ctrl input[type=text] {
@@ -199,7 +199,6 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
-                  map.flyTo({center: features[0].geometry.coordinates});
                 }
               };
               var layers = document.getElementById('menu');
@@ -211,6 +210,7 @@
               layerIDs.forEach(function(layerID) {
               map.setLayoutProperty(layerID, 'visibility',
                 layerID.indexOf(value) > -1 ? 'visible' : 'none');
+//              map.flyTo({center: features[0].geometry.coordinates});
               });
             });
           </script>
