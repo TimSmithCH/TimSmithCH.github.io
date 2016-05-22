@@ -76,7 +76,7 @@
       <div class="home">
         <div class="wrapper">
           <h1>Commuting Routes</h1>
-          <div id='map' style='width: 728px; height: 650px;'>
+          <div id='map' style='width: 728px; height: 728px;'>
             <nav id="menu"></nav>
           </div>
 
@@ -135,6 +135,7 @@
                 "source": "accel",
                 "paint": {
                   "line-color": "blue",
+                  "line-width": 6;
                   "line-opacity": 0.5
                 }
               });
@@ -142,7 +143,7 @@
             });
             toggleLayer("Meyrin", "meyrin");
             toggleLayer("Prevessin", "prevessin");
-            toggleLayer("LHC", "lhc");
+            toggleLayer("Accelerators", "accel");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
