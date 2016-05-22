@@ -71,14 +71,14 @@
         background: #3074a4;
       }
       
-      .filter-ctrl {
+      .search-ctrl {
         position: absolute;
         bottom: 10px;
         left: 10px;
         z-index: 2;
         width: 180px;
       }
-      .filter-ctrl input[type=text] {
+      .search-ctrl input[type=text] {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         width: 100%;
         border: 0;
@@ -98,13 +98,13 @@
           <h1>CERN Sites, Accelerators and Buildings</h1>
           <div id='map' style='width: 728px; height: 728px;'>
             <nav id="menu"></nav>
-            <div class='filter-ctrl'>
-              <input id='filter-input' type='text' name='filter' placeholder='Filter by name' />
+            <div class='search-ctrl'>
+              <input id='search-input' type='text' name='search' placeholder='Search for building' />
             </div>
           </div>
 
           <script>
-            var filterInput = document.getElementById('filter-input');
+            var searchInput = document.getElementById('search-input');
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
               container: 'map', // container id
@@ -209,12 +209,13 @@
               layers.appendChild(link);
             }
             
-            filterInput.addEventListener('keyup', function(e) {
+            searchInput.addEventListener('keyup', function(e) {
               var value = e.target.value.trim().toLowerCase();
-              layerIDs.forEach(function(layerID) {
-              map.setLayoutProperty(layerID, 'visibility',
-                layerID.indexOf(value) > -1 ? 'visible' : 'none');
+//              layerIDs.forEach(function(layerID) {
+//              map.setLayoutProperty(layerID, 'visibility',
+//                layerID.indexOf(value) > -1 ? 'visible' : 'none');
 //              map.flyTo({center: features[0].geometry.coordinates});
+              map.fitBounds(meyrin.getBounds());
               });
             });
           </script>
