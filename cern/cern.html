@@ -70,12 +70,32 @@
       #menu a.active:hover {
         background: #3074a4;
       }
+      
+      .filter-ctrl {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1;
+        width: 180px;
+      }
+      .filter-ctrl input[type=text] {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        width: 100%;
+        border: 0;
+        background-color: #fff;
+        height: 40px;
+        margin: 0;
+        color: rgba(0,0,0,.5);
+        padding: 10px;
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        border-radius: 3px;
+      }
     </style>
 
     <div class="page-content">
       <div class="home">
         <div class="wrapper">
-          <h1>Commuting Routes</h1>
+          <h1>CERN Sites, Accelerators and Buildings</h1>
           <div id='map' style='width: 728px; height: 728px;'>
             <nav id="menu"></nav>
           </div>
@@ -179,11 +199,20 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
+                  map.flyTo({center: features[0].geometry.coordinates});
                 }
               };
               var layers = document.getElementById('menu');
               layers.appendChild(link);
             }
+            
+            filterInput.addEventListener('keyup', function(e) {
+              var value = e.target.value.trim().toLowerCase();
+              layerIDs.forEach(function(layerID) {
+              map.setLayoutProperty(layerID, 'visibility',
+                layerID.indexOf(value) > -1 ? 'visible' : 'none');
+              });
+            });
           </script>
 
         </div>
