@@ -203,7 +203,6 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
-                  map.fitBounds(id.getBounds());
                 }
               };
               var layers = document.getElementById('menu');
@@ -217,7 +216,7 @@
 //                  layerID.indexOf(value) > -1 ? 'visible' : 'none');
 //              map.flyTo({center: features[0].geometry.coordinates});
 //              map.fitBounds(meyrin.getBounds());
-              map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]]);
+              map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: '100' });
 //              });
             });
           </script>
