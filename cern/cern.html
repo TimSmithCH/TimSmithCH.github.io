@@ -168,6 +168,56 @@
                 }
               });
 
+              // CERN LHC sites
+              map.addSource("lhc", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/cern/CERN_LHC.geojson"
+              });
+              map.addLayer({
+                "id": "lhc",
+                "type": "fill",
+                "source": "lhc",
+                "paint": {
+                  "fill-color": "green",
+                  "fill-opacity": 0.5
+                }
+              });
+              map.addLayer({
+                "id": "lhc_b",
+                "type": "line",
+                "source": "lhc",
+                "paint": {
+                  "line-color": "green",
+                  "line-width": 6,
+                  "line-opacity": 0.9
+                }
+              });
+
+              // CERN SPS sites
+              map.addSource("sps", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/cern/CERN_SPS.geojson"
+              });
+              map.addLayer({
+                "id": "sps",
+                "type": "fill",
+                "source": "sps",
+                "paint": {
+                  "fill-color": "red",
+                  "fill-opacity": 0.5
+                }
+              });
+              map.addLayer({
+                "id": "sps_b",
+                "type": "line",
+                "source": "sps",
+                "paint": {
+                  "line-color": "red",
+                  "line-width": 6,
+                  "line-opacity": 0.9
+                }
+              });
+
               // CERN Accelerators
               map.addSource("accel", {
                 "type": "geojson",
