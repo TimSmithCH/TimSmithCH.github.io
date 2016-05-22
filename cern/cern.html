@@ -108,6 +108,15 @@
                   "fill-opacity": 0.5
                 }
               });
+              map.addLayer({
+                "id": "meyrin_b",
+                "type": "line",
+                "source": "meyrin",
+                "paint": {
+                  "line-color": "yellow",
+                  "line-opacity": 0.9
+                }
+              });
 
               // CERN Prevessin site
               map.addSource("prevessin", {
@@ -121,6 +130,15 @@
                 "paint": {
                   "fill-color": "yellow",
                   "fill-opacity": 0.5
+                }
+              });
+              map.addLayer({
+                "id": "prevessin_b",
+                "type": "line",
+                "source": "prevessin",
+                "paint": {
+                  "line-color": "yellow",
+                  "line-opacity": 0.9
                 }
               });
 
