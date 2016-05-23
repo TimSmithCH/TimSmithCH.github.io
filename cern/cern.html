@@ -260,14 +260,12 @@
             }
             
             searchInput.addEventListener('keyup', function(e) {
-              var value = e.target.value.trim().toLowerCase();
-//              layerIDs.forEach(function(layerID) {
-//                map.setLayoutProperty(layerID, 'visibility',
-//                  layerID.indexOf(value) > -1 ? 'visible' : 'none');
-//              map.flyTo({center: features[0].geometry.coordinates});
-//              map.fitBounds(meyrin.getBounds());
-              map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: '100' });
-//              });
+              if (e.keyCode == 13) { // Act when return entered
+                var value = e.target.value.trim().toLowerCase();
+//                map.flyTo({center: features[0].geometry.coordinates});
+//                map.fitBounds(meyrin.getBounds());
+                map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: '100' });
+              }
             });
           </script>
 
