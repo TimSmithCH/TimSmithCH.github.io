@@ -235,6 +235,22 @@
                 }
               });
 
+              // CERN SPS sites
+              map.addSource("buildings", {
+                "type": "geojson",
+                "data": "http://timsmithch.github.io/cern/buildings_in_CERN_Meyrin.geojson"
+              });
+              map.addLayer({
+                "id": "buildings",
+                "type": "line",
+                "source": "buildings",
+                "paint": {
+                  "line-color": "red",
+                  "line-width": 6,
+                  "line-opacity": 0.9
+                }
+              });
+
             });
             toggleLayer("Meyrin", "meyrin");
             toggleLayer("Prevessin", "prevessin");
