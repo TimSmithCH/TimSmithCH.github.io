@@ -6,7 +6,7 @@ xmlns="http://www.topografix.com/GPX/1/1"
 xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata>
 <name><![CDATA[Downloader: 2016-08-11T08:51:40 # 118720 # gpstracks # 81.13.216.133]]></name>
-<desc><![CDATA[Cabane de Valsorey (3030 m.ü.M.)]]></desc>
+<desc><![CDATA[Cabane de Valsorey (3030 m.Ã¼.M.)]]></desc>
 <author>
 <name>Christian Steiner</name>
 <email id="info" domain="GPS-Tracks.com"/>
@@ -28,7 +28,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/
 <sym>Trail Head</sym>
 </wpt>
 <wpt lat="45.91697" lon="7.24545">
-<name>Cab du VÚlan</name>
+<name>Cab du VÃšlan</name>
 <sym>Restaurant</sym>
 </wpt>
 <wpt lat="45.99873" lon="7.29969">
@@ -52,7 +52,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/
 <sym>Bank</sym>
 </wpt>
 <wpt lat="45.97822" lon="7.29684">
-<name>Gl CorbassiÞ</name>
+<name>Gl CorbassiÃž</name>
 <sym>City (Small)</sym>
 </wpt>
 <wpt lat="45.9376" lon="7.29933">
