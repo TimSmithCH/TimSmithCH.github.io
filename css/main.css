@@ -299,7 +299,6 @@ pre code.hljs {
   box-shadow: 0 2px #6fa9d0;
   padding: 0 1em;
   margin: 0;
-  position: fixed;
   /*
   *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
   */ }
@@ -315,7 +314,8 @@ pre code.hljs {
   .navigation .navigation-wrapper {
     max-width: 48em;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    position: fixed; }
     .navigation .navigation-wrapper::after {
       clear: both;
       content: "";
