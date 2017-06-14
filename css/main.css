@@ -311,7 +311,7 @@ pre code.hljs {
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation .navigation-menu-button {
         display: none; } }
   .navigation .navigation-wrapper {
@@ -330,7 +330,7 @@ pre code.hljs {
   .navigation .logo {
     float: left;
     height: 4em; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation .logo {
         padding-left: 16px; } }
     .navigation .logo img {
@@ -342,7 +342,7 @@ pre code.hljs {
   .navigation nav {
     float: none;
     padding: 1.25em 0; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation nav {
         float: right;
         line-height: 1.5em; } }
@@ -353,7 +353,7 @@ pre code.hljs {
     overflow: visible;
     padding: 0;
     width: 100%; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation ul.navigation-menu {
         display: block;
         margin: 0;
@@ -365,7 +365,7 @@ pre code.hljs {
     text-align: right;
     width: 100%;
     padding: 0.25em 0; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation ul li.nav-link {
         background: transparent;
         display: inline;
@@ -373,10 +373,10 @@ pre code.hljs {
         width: auto; } }
   .navigation li.nav-link a {
     display: inline-block; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .navigation li.nav-link a {
         padding-right: 1.5em; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: var(--screen_text_width)) {
     .navigation li.nav-link:last-child a {
       padding-right: 1em; } }
 
@@ -569,7 +569,7 @@ pre code.hljs {
         width: 48.82117%; }
         .site-footer .site-navigation:last-child {
           margin-right: 0; } }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .site-footer .site-navigation {
         float: left;
         display: block;
@@ -596,7 +596,7 @@ pre code.hljs {
         margin-right: 0; }
         .site-footer .site-contact:last-child {
           margin-right: 0; } }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .site-footer .site-contact {
         float: left;
         display: block;
@@ -617,7 +617,7 @@ pre code.hljs {
     font-size: 0.9em; }
     .site-footer .site-signature:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .site-footer .site-signature {
         float: left;
         display: block;
