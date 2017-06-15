@@ -291,7 +291,7 @@ pre code.hljs {
     .site-header-container .scrim.has-cover, .post-header-container .scrim.has-cover {
       background-color: rgba(0, 0, 0, 0.2);
       padding: 6em 1em !important; }
-      @media screen and (min-width: var(--screen_text_width)) {
+      @media screen and (min-width: 768px) {
         .site-header-container .scrim.has-cover, .post-header-container .scrim.has-cover {
           padding: 9em 1em !important; } }
 
