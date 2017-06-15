@@ -311,7 +311,7 @@ pre code.hljs {
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation .navigation-menu-button {
         display: none; } }
   .navigation .navigation-wrapper {
@@ -330,7 +330,7 @@ pre code.hljs {
   .navigation .logo {
     float: left;
     height: 4em; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation .logo {
         padding-left: 16px; } }
     .navigation .logo img {
@@ -342,7 +342,7 @@ pre code.hljs {
   .navigation nav {
     float: none;
     padding: 1.25em 0; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation nav {
         float: right;
         line-height: 1.5em; } }
@@ -353,7 +353,7 @@ pre code.hljs {
     overflow: visible;
     padding: 0;
     width: 100%; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation ul.navigation-menu {
         display: block;
         margin: 0;
@@ -365,7 +365,7 @@ pre code.hljs {
     text-align: right;
     width: 100%;
     padding: 0.25em 0; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation ul li.nav-link {
         background: transparent;
         display: inline;
@@ -373,10 +373,10 @@ pre code.hljs {
         width: auto; } }
   .navigation li.nav-link a {
     display: inline-block; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .navigation li.nav-link a {
         padding-right: 1.5em; } }
-  @media screen and (min-width: var(--screen_text_width)) {
+  @media screen and (min-width: 768px) {
     .navigation li.nav-link:last-child a {
       padding-right: 1em; } }
 
