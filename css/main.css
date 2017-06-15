@@ -469,7 +469,7 @@ pre code.hljs {
     width: 100%; }
     .page-content .post .rss:last-child {
       margin-right: 0; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .page-content .post .rss {
         margin: 1em 0;
         float: left;
@@ -487,7 +487,7 @@ pre code.hljs {
     width: 100%; }
     .page-content .post .share:last-child {
       margin-right: 0; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .page-content .post .share {
         float: left;
         display: block;
@@ -569,7 +569,7 @@ pre code.hljs {
         width: 48.82117%; }
         .site-footer .site-navigation:last-child {
           margin-right: 0; } }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .site-footer .site-navigation {
         float: left;
         display: block;
@@ -596,7 +596,7 @@ pre code.hljs {
         margin-right: 0; }
         .site-footer .site-contact:last-child {
           margin-right: 0; } }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .site-footer .site-contact {
         float: left;
         display: block;
@@ -617,7 +617,7 @@ pre code.hljs {
     font-size: 0.9em; }
     .site-footer .site-signature:last-child {
       margin-right: 0; }
-    @media screen and (min-width: var(--screen_text_width)) {
+    @media screen and (min-width: 768px) {
       .site-footer .site-signature {
         float: left;
         display: block;
