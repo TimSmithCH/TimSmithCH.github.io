@@ -469,7 +469,7 @@ pre code.hljs {
     width: 100%; }
     .page-content .post .rss:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .page-content .post .rss {
         margin: 1em 0;
         float: left;
@@ -487,7 +487,7 @@ pre code.hljs {
     width: 100%; }
     .page-content .post .share:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: var(--screen_text_width)) {
       .page-content .post .share {
         float: left;
         display: block;
