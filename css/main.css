@@ -1,5 +1,5 @@
 :root {
-  --screen_text_width: 768px;
+  --screen_text_width: 48em;
 }
 @import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700,300|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
 button, input[type="button"], input[type="reset"], input[type="submit"],
@@ -315,7 +315,7 @@ pre code.hljs {
       .navigation .navigation-menu-button {
         display: none; } }
   .navigation .navigation-wrapper {
-    max-width: 48em;
+    max-width: var(--site_text_width);
     margin-left: auto;
     margin-right: auto;
     position: relative; }
@@ -394,7 +394,7 @@ pre code.hljs {
   *	Pages
   */ }
   .page-content .wrapper {
-    max-width: 48em;
+    max-width: var(--site_text_width);
     margin-left: auto;
     margin-right: auto;
     padding: 1em; }
@@ -405,7 +405,7 @@ pre code.hljs {
   .page-content .post-list {
     padding-top: 1em !important; }
   .page-content .post-meta {
-    max-width: 48em;
+    max-width: var(--site_text_width);
     margin-left: auto;
     margin-right: auto;
     color: #999; }
