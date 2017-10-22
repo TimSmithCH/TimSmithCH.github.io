@@ -2,7 +2,7 @@ var test = require('tape').test,
     assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
-    tj = require('../');
+    tj = require('togeojson');
 
 if (!process.browser) {
     var xmldom = require('xmldom');
@@ -32,14 +32,14 @@ function gpxFixtureEqual(t, file) {
 }
 
 test('KML', function(t) {
-    glob.sync('test/data/*.kml').forEach(function(file) {
+    glob.sync('tracks/kml/*.kml').forEach(function(file) {
         kmlFixtureEqual(t, file);
     });
     t.end();
 });
 
 test('GPX', function(t) {
-    glob.sync('test/data/*.gpx').forEach(function(file) {
+    glob.sync('tracks/gpx/*.gpx').forEach(function(file) {
         gpxFixtureEqual(t, file);
     });
     t.end();
