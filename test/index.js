@@ -2,7 +2,7 @@ var test = require('tape').test,
     assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
-    tj = require('togeojson');
+    tj = require('@mapbox/togeojson');
 
 if (!process.browser) {
     var xmldom = require('xmldom');
