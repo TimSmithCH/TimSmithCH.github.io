@@ -1,4 +1,5 @@
 var test = require('tape').test,
+    de = require('dotenv').config(),
     assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
