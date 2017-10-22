@@ -7,7 +7,7 @@
     "tracks": "tracks"
   },
   "scripts": {
-    "test": "tape test/index.js",
+    "test": "tape test/index.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -19,5 +19,5 @@
     "geojson",
     "gpx",
     "maps"
-  ],
+  ]
 }
