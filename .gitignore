@@ -1,0 +1,5 @@
+# Tracks
+Tracks/geojson
+
+# dotenv environment variables file
+.env
