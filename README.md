@@ -8,6 +8,9 @@ A container for:
 
 ## Acknowledgements
 Mapping thanks to https://www.mapbox.com/mapbox-gl-js/api/
+
 Country data thanks to http://www.naturalearthdata.com
+
 Geojson conversion thanks to https://github.com/mapbox/togeojson
+
 Theme thanks to
