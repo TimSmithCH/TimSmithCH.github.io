@@ -7,6 +7,16 @@ notifications:
     on_success: never # default: change
     on_failure: always # default: always
 
+# blocklist - wont run travis on these
+branches:
+  except:
+  - master
+
+# safelist - will run travis on these
+branches:
+  only:
+  - gen_tracks
+
 before_script:
   - npm install dotenv --save
   - npm install tape --save
@@ -17,4 +27,4 @@ before_script:
 #  skip_cleanup: true
 #  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
 #  on:
-#    branch: master
+#    branch: gen_tracks
