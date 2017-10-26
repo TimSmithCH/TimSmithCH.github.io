@@ -7,14 +7,10 @@ notifications:
     on_success: never # default: change
     on_failure: always # default: always
 
-# blocklist - wont run travis on these
 branches:
-  except:
+  except: # blocklist - wont run travis on these
   - master
-
-# safelist - will run travis on these
-branches:
-  only:
+  only: # safelist - will run travis on these
   - gen_tracks
 
 before_script:
@@ -25,6 +21,16 @@ before_script:
 #deploy:
 #  provider: pages
 #  skip_cleanup: true
-#  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+#  github_token: $PUB_REP_TOKEN
 #  on:
 #    branch: gen_tracks
+#  local_dir: tracks/gpx
+#  target_branch: gen_tracks
+
+#deploy:
+#  provider: releases
+#  api_key: "GITHUB OAUTH TOKEN"
+#  file: "FILE TO UPLOAD"
+#  skip_cleanup: true
+#  on:
+#    tags: true
