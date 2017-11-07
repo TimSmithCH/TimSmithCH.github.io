@@ -1,6 +1,15 @@
-body {
+//body {
+//  background-image: url('../assets/CERNLogoOutline.svg');
+//  background-repeat: no-repeat;
+//  background-position: 2% 96%;
+//  background-size: 5%;
+//}
+.reveal > .backgrounds > div {
   background-image: url('../assets/CERNLogoOutline.svg');
   background-repeat: no-repeat;
   background-position: 2% 96%;
   background-size: 5%;
+}
+.reveal > .backgrounds > div:first-child {
+  background-image: none;
 }
