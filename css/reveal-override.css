@@ -1,5 +1,5 @@
 body:after {
-content: url(../images/cern_logo.png);
+content: url(../assets/CERNLogoBadge.png);
 position: fixed;
 bottom: 3.5em;
 left: 3.5em;
