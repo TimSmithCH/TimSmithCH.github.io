@@ -1,8 +1,8 @@
 body:after {
-  content: url(../assets/CERNLogoBadge.svg);
+  content: url(../assets/CERNLogoOutline.svg);
   position: fixed;
-  bottom: 3.5em;
-  left: 3.5em;
-  max-width: 50px;
+  bottom: 3.0em;
+  left: 3.0em;
+  max-width: 40px;
   box-shadow: 5px 5px 10px #000;
 }
