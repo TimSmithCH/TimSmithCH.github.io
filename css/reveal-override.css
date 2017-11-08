@@ -6,6 +6,8 @@
 }
 .reveal > .backgrounds > div:first-child {
   background-image: url('../assets/CERNLogoOutline.svg');
-  background-color: blue;
+  background-color: #0053A1;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
 }
