@@ -11,3 +11,10 @@
   background-position: 50% 50%;
   background-size: 16%;
 }
+.reveal > .backgrounds > div:last-child {
+  background-image: url('../assets/CERNLogoOutlineWhite.svg');
+  background-color: #0053A1;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16%;
+}
