@@ -36,7 +36,7 @@
               style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
               // FIONAY center: [7.2989238, 46.032874], // starting position
               center: [88.5621603, 48.8269485], // starting position
-              zoom: 10 // starting zoom
+              zoom: 8 // starting zoom
             });
             
             // Add zoom, rotation and full_screen controls to the map
@@ -70,20 +70,16 @@
                   "filter": ["==", "$type", "LineString"]
                 });
                 map.addLayer({
-                  "id": layer,
+                  "id": layer + "points",
                   "type": "symbol",
                   "source": layer,
                   "layout": {
-                    "visibility": "visible",
-                    "line-join": "round",
-                    "line-cap": "round"
-                  },
-                  "paint": {
-                    "title": {
-                      "type": "identity",
-                      "property": "name"
-                    },
-                    "icon": "monument"
+                    //"icon-image": "{icon}-15",
+                    "icon-image": "monument-15",
+                    "text-field": "{name}",
+                    "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                    "text-offset": [0, 0.6],
+                    "text-anchor": "top"
                   },
                   "filter": ["==", "$type", "Point"]
                 });
