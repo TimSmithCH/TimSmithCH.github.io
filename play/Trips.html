@@ -34,7 +34,8 @@
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
-              center: [7.2989238, 46.032874], // starting position
+              // FIONAY center: [7.2989238, 46.032874], // starting position
+              center: [88.5621603, 48.8269485], // starting position
               zoom: 10 // starting zoom
             });
             
@@ -70,7 +71,7 @@
                 });
                 map.addLayer({
                   "id": layer,
-                  "type": "line",
+                  "type": "symbol",
                   "source": layer,
                   "layout": {
                     "visibility": "visible",
