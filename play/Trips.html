@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TrackMap</title>
+    <title>Adventures</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
@@ -43,7 +43,7 @@
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
             // Prepare layer properties object
-            var layer_props = { Mongolia: { datafile: "Mongolia.geojson", colour: "red" } };
+            var layer_props = { Mongolia: { datafile: "Mongolia.geojson", zoom: 8, center: [88.5621603, 48.8269485] } };
             map.on('load', function () {
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
@@ -85,76 +85,10 @@
                 });
               }
             });
-            // Create a popup, but don't add it to the map yet
-            var popup = new mapboxgl.Popup({
-              closeButton: false,
-              closeOnClick: false
-            });
-            // Loop creating popup on hover for each layer
+            // Loop creating a layer of routes of each type from geojson file
             for (let layer of Object.keys(layer_props)) {
-              map.on('mouseenter', layer, function(e) {
-                // Change the cursor style as a UI indicator.
-                map.getCanvas().style.cursor = 'pointer';
-                // Populate the popup and set its coordinates based on the feature found.
-                var date = e.features[0].properties.time.split('T',1)
-                popup.setLngLat(e.lngLat)
-                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                    .addTo(map);
-              });
-              map.on('mouseleave', layer, function() {
-                map.getCanvas().style.cursor = '';
-                popup.remove();
-              });
+              toggleLayer(layer, layer);
             }
-            // Create the handler to display detailed route when clicked
-            map.on('click', function(e) {
-              var features = map.queryRenderedFeatures(e.point, { layers: Object.keys(layer_props),
-                                                                  filter: ["==", "$type", "LineString"] });
-              // If didnt click on a LineString then feature list will be empty
-              if (features.length == 0) return;
-              // Zoom to fit clicked track in screen
-              var coordinates = features[0].geometry.coordinates;
-              var bounds = coordinates.reduce(function(bounds, coord) {
-                return bounds.extend(coord);
-              }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
-              map.fitBounds(bounds, {
-                padding: 20
-              });
-              // Load detailed coordinates of clicked track
-              var trackname = features[0].properties.name +'.geojson';
-              // Eliminate spaces and apostrophes from filenames
-              trackname = trackname.replace(/ |\u2019/g, "_");
-              var layerid = features[0].layer.id;
-              layerid = layerid.replace(/_routes/g, "");
-              // Remove any previous detail layer
-              if (map.getLayer("detail_layer")) {
-                map.removeSource("detail_layer");
-                map.removeLayer("detail_layer");
-              }
-              map.addSource("detail_layer", {
-                "type": "geojson",
-                "data": "tracks/geojson/" + layerid + "/" + trackname
-              });
-              map.addLayer({
-                "id": "detail_layer",
-                "type": "line",
-                "source": "detail_layer",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "orange",
-                  "line-width": 4
-                }
-              });
-              // Toggle the routes layer by simulating a mouse click
-              if (layerid == 'Mongolia') {
-                document.getElementById('Mongolia').click();
-              }
-            });
-            toggleLayer("Mongolia", "Mongolia");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
@@ -172,6 +106,9 @@
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
                 }
+                map.flyTo({center: layer_props[name]["center"]});
+                // layer_props[name]["zoom"]
+                // layer_props[name]["center"]
               };
               var layers = document.getElementById('menu');
               layers.appendChild(link);
