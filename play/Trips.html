@@ -105,7 +105,7 @@
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
                 }
-                map.flyTo({center: layer_props[name]["center"], zoom: layer_props[name]["center"]});
+                map.flyTo({center: layer_props[name]["center"], zoom: layer_props[name]["zoom"]});
               };
               var layers = document.getElementById('menu');
               layers.appendChild(link);
