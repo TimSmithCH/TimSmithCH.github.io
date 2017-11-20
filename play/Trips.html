@@ -34,9 +34,8 @@
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
-              // FIONAY center: [7.2989238, 46.032874], // starting position
-              center: [88.5621603, 48.8269485], // starting position
-              zoom: 8 // starting zoom
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 5 // starting zoom
             });
             
             // Add zoom, rotation and full_screen controls to the map
@@ -106,9 +105,7 @@
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
                 }
-                map.flyTo({center: layer_props[name]["center"]});
-                // layer_props[name]["zoom"]
-                // layer_props[name]["center"]
+                map.flyTo({center: layer_props[name]["center"], zoom: layer_props[name]["center"]});
               };
               var layers = document.getElementById('menu');
               layers.appendChild(link);
