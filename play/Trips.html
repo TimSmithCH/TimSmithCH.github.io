@@ -22,7 +22,7 @@
     <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
     <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
     <header class="header">
-      Track Collections Mapped
+      Adventures Mapped
     </header>
     <main class="main">
       <div id='map' class="main-content">
@@ -35,7 +35,7 @@
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
               center: [7.2989238, 46.032874], // starting position
-              zoom: 11 // starting zoom
+              zoom: 10 // starting zoom
             });
             
             // Add zoom, rotation and full_screen controls to the map
@@ -60,8 +60,30 @@
                     "line-cap": "round"
                   },
                   "paint": {
-                    "line-color": layer_props[layer]["colour"],
-                    "line-width": 4
+                    "line-width": 4,
+                    "line-color": {
+                      "type": "identity",
+                      "property": "stroke"
+                    }
+                  },
+                  "filter": ["==", "$type", "LineString"]
+                });
+                map.addLayer({
+                  "id": layer,
+                  "type": "line",
+                  "source": layer,
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                  "paint": {
+                    "circle-radius": 6,
+                    "circle-color": "#B42222"
+                    //"title": "Mapbox DC",
+                    //"icon": "monument"
+                  },
+                  "filter": ["==", "$type", "Point"]
                   }
                 });
               }
