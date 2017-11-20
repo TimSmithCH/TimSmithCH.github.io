@@ -78,10 +78,11 @@
                     "line-cap": "round"
                   },
                   "paint": {
-                    "circle-radius": 6,
-                    "circle-color": "#B42222"
-                    //"title": "Mapbox DC",
-                    //"icon": "monument"
+                    "title": {
+                      "type": "identity",
+                      "property": "name"
+                    }
+                    "icon": "monument"
                   },
                   "filter": ["==", "$type", "Point"]
                 });
