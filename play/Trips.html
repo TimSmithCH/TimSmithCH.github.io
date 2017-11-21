@@ -35,7 +35,7 @@
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
               center: [7.2989238, 46.032874], // starting position
-              zoom: 5 // starting zoom
+              zoom: 4 // starting zoom
             });
             
             // Add zoom, rotation and full_screen controls to the map
@@ -104,8 +104,8 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
+                  map.flyTo({center: layer_props[name]["center"], zoom: layer_props[name]["zoom"]});
                 }
-                map.flyTo({center: layer_props[name]["center"], zoom: layer_props[name]["zoom"]});
               };
               var layers = document.getElementById('menu');
               layers.appendChild(link);
