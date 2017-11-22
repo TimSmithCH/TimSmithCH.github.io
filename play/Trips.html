@@ -41,6 +41,8 @@
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
+            // Add a scale
+            map.addControl(new mapboxgl.Scale());
             // Prepare layer properties object
             var layer_props = { Mongolia: { datafile: "Mongolia.geojson", zoom: 8, center: [88.5621603, 48.8269485] } };
             map.on('load', function () {
