@@ -42,10 +42,10 @@
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
             // Prepare layer properties object
-            var layer_props = { 2014_routes: { datafile: "Overview_Strava_2014.geojson", colour: "red",    menu: "2014" },
-                                2015_routes: { datafile: "Overview_Strava_2015.geojson", colour: "green",  menu: "2015" },
-                                2016_routes: { datafile: "Overview_Strava_2016.geojson", colour: "blue",   menu: "2016" },
-                                2017_routes: { datafile: "Overview_Strava_2017.geojson", colour: "purple", menu: "2017" } };
+            var layer_props = { "2014_routes": { datafile: "Overview_Strava_2014.geojson", colour: "red",    menu: "2014" },
+                                "2015_routes": { datafile: "Overview_Strava_2015.geojson", colour: "green",  menu: "2015" },
+                                "2016_routes": { datafile: "Overview_Strava_2016.geojson", colour: "blue",   menu: "2016" },
+                                "2017_routes": { datafile: "Overview_Strava_2017.geojson", colour: "purple", menu: "2017" } };
             map.on('load', function () {
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
