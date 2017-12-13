@@ -50,7 +50,7 @@
             });
             
             // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.Navigation());
+            map.addControl(new mapboxgl.NavigationControl());
             
             map.on('load', function () {
               // Scan full data file for countries where I've modified the note_adm0 field to "visited"
