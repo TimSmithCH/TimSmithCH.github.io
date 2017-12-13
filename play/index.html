@@ -7,8 +7,8 @@
     <title>Tim Smith</title>
     <meta name="description" content="A home page for Tim">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -44,7 +44,7 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
               container: 'map', // container id
-              style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
               center: [20.0, 30.0], // starting position
               zoom: 1 // starting zoom
             });
@@ -56,14 +56,13 @@
               // Scan full data file for countries where I've modified the note_adm0 field to "visited"
               map.addSource("visited", {
                 "type": "geojson",
-                //"data": "http://timsmithch.github.io/play/countries_visited.geojson"
                 "data": "http://timsmithch.github.io/play/ne_110m_admin_0_countries.geojson"
               });
               map.addLayer({
                 "id": "visited",
                 "type": "fill",
                 "source": "visited",
-                "filter": ["==", "note_adm0", "visited"],
+                "filter": ["in", ["get", "name"], "England", "Scotland", "Wales"],
                 "paint": {
                   "fill-color": "yellow",
                   "fill-opacity": 0.5
