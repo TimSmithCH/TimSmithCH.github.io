@@ -41,6 +41,7 @@
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
+        
             // Prepare layer properties object
             var layer_props = { "2014_routes": { datafile: "Overview_Strava_2014.geojson", colour: "red",    menu: "2014" },
                                 "2015_routes": { datafile: "Overview_Strava_2015.geojson", colour: "green",  menu: "2015" },
@@ -91,9 +92,13 @@
               });
             }
             // Loop creating menu items
-            for (let layer of Object.keys(layer_props)) {
-              toggleLayer(layer_props[layer]["menu"], layer);
-            }
+//            for (let layer of Object.keys(layer_props)) {
+//              toggleLayer(layer_props[layer]["menu"], layer);
+//            }
+            toggleLayer("2014", "2014_routes");
+            toggleLayer("2015", "2015_routes");
+            toggleLayer("2016", "2016_routes");
+            toggleLayer("2017", "2017_routes");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
