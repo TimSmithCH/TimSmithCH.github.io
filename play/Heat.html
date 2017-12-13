@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heat Map</title>
+    <meta name="description" content="Heat Map">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/trackmap.css">
+  </head>
+
+  <body class="wrapper">
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+    <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <header class="header">
+      Heat Map of Activities by Year
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
+            // Prepare layer properties object
+            var layer_props = { 2014_routes: { datafile: "Overview_Strava_2014.geojson", colour: "red",    menu: "2014" },
+                                2015_routes: { datafile: "Overview_Strava_2015.geojson", colour: "green",  menu: "2015" },
+                                2016_routes: { datafile: "Overview_Strava_2016.geojson", colour: "blue",   menu: "2016" },
+                                2017_routes: { datafile: "Overview_Strava_2017.geojson", colour: "purple", menu: "2017" } };
+            map.on('load', function () {
+              // Loop creating a layer of routes of each type from geojson file
+              for (let layer of Object.keys(layer_props)) {
+                map.addSource(layer, {
+                  "type": "geojson",
+                  "data": "tracks/geojson/" + layer_props[layer]["datafile"]
+                });
+                map.addLayer({
+                  "id": layer,
+                  "type": "line",
+                  "source": layer,
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                  "paint": {
+                    "line-color": layer_props[layer]["colour"],
+                    "line-width": 4
+                  }
+                });
+              }
+            });
+            // Create a popup, but don't add it to the map yet
+            var popup = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false
+            });
+            // Loop creating popup on hover for each layer
+            for (let layer of Object.keys(layer_props)) {
+              map.on('mouseenter', layer, function(e) {
+                // Change the cursor style as a UI indicator.
+                map.getCanvas().style.cursor = 'pointer';
+                // Populate the popup and set its coordinates based on the feature found.
+                var date = e.features[0].properties.time.split('T',1)
+                popup.setLngLat(e.lngLat)
+                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                    .addTo(map);
+              });
+              map.on('mouseleave', layer, function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+              });
+            }
+            // Loop creating menu items
+            for (let layer of Object.keys(layer_props)) {
+              toggleLayer(layer_props[layer]["menu"], layer);
+            }
+            function toggleLayer(name, id) {
+              var link = document.createElement('a');
+              link.href = '#';
+              link.className = 'active';
+              link.textContent = name;
+              link.id = name;
+              link.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var visibility = map.getLayoutProperty(id, 'visibility');
+                if (visibility === 'visible') {
+                  map.setLayoutProperty(id, 'visibility', 'none');
+                  this.className = '';
+                } else {
+                  this.className = 'active';
+                  map.setLayoutProperty(id, 'visibility', 'visible');
+                }
+              };
+              var layers = document.getElementById('menu');
+              layers.appendChild(link);
+            }
+      </script>
+    </main>
+
+    <footer class="footer">
+        TrackMap: &copy; Tim Smith CC-BY-4.0
+    </footer>
+  </body>
+</html>
