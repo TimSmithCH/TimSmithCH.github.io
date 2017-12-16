@@ -113,30 +113,3 @@ body {
 .mapboxgl-popup {
     max-width: 300px;
 }
-.div-table {
-    display: table;
-    border-spacing: 5px;
-}
-.tr {
-    display: table-row;
-}
-.tc {
-    display:table-cell;
-    vertical-align:top;
-    padding:5px 5px;
-    position: relative; 
-}
-div.transbox {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.7);
-    padding: 0px 10px; 
-    opacity: 0.6;
-}
-div.transbox p {
-    color: white; 
-    font: bold 24px/0px Helvetica, Sans-Serif; 
-}
