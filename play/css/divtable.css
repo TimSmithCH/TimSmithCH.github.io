@@ -26,6 +26,5 @@ div.transbox p {
     font: bold 24px/12px Helvetica, Sans-Serif; 
 }
 hr {
-    color: #6fa9d0;
-    size: 2px;
+    border-top: 2px solid #6fa9d0;
 }
