@@ -18,7 +18,7 @@ div.transbox {
     transform: translate(-50%, -50%);
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
-    padding: 10px; 
+    padding: 0px 12px; 
     opacity: 0.6;
 }
 div.transbox p {
