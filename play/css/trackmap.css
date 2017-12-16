@@ -113,30 +113,30 @@ body {
 .mapboxgl-popup {
     max-width: 300px;
 }
-h2 { 
-   position: absolute; 
-   top: 200px; 
-   left: 0; 
-   width: 100%; 
+.div-table {
+    display: table;
+    border-spacing: 5px;
 }
-h2 span { 
-   color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px; 
+.tr {
+    display: table-row;
 }
-td.transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
+.tc {
+    display:table-cell;
+    vertical-align:top;
+    padding:5px 5px;
+    position: relative; 
 }
-
-td.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
+div.transbox {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0px 10px; 
+    opacity: 0.6;
+}
+div.transbox p {
+    color: white; 
+    font: bold 24px/0px Helvetica, Sans-Serif; 
 }
