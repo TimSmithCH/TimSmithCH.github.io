@@ -2,9 +2,11 @@
 [![Build Status](https://travis-ci.org/TimSmithCH/TimSmithCH.github.io.svg?branch=master)](https://travis-ci.org/TimSmithCH/TimSmithCH.github.io)
 
 A container for:
-- work related bio
-- commuting info and news
-- activity maps
+- Work related bio
+- Commuting info and news
+- Activity maps
+
+Find it [here](http://timsmithch.github.io/)
 
 ## Acknowledgements
 Mapping thanks to https://www.mapbox.com/mapbox-gl-js/api/  
