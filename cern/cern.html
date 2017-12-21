@@ -7,8 +7,8 @@
     <title>CERN Maps</title>
     <meta name="description" content="A home page for Tim">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -109,14 +109,14 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
               container: 'map', // container id
-              style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-              //style: 'mapbox://styles/mapbox/outdoors-v9', //stylesheet location
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
               center: [6.0659, 46.2728], // starting position
               zoom: 12 // starting zoom
             });
             
-            // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.Navigation());
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
             
             map.on('load', function () {
               // CERN Myerin site
@@ -282,7 +282,7 @@
                 var value = e.target.value.trim().toLowerCase();
 //                map.flyTo({center: features[0].geometry.coordinates});
 //                map.fitBounds(meyrin.getBounds());
-                map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: '100' });
+                map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: '10' });
               }
             });
           </script>
