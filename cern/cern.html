@@ -280,9 +280,9 @@
             searchInput.addEventListener('keyup', function(e) {
               if (e.keyCode == 13) { // Act when return entered
                 var value = e.target.value.trim().toLowerCase();
-//                map.flyTo({center: features[0].geometry.coordinates});
-//                map.fitBounds(meyrin.getBounds());
-                map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: 100 });
+                map.flyTo({center: features[0].geometry.coordinates});
+                map.fitBounds(meyrin.getBounds());
+                //map.fitBounds([[6.0338419,46.2292395],[6.0570547,46.2385931]], { padding: 100 });
               }
             });
           </script>
