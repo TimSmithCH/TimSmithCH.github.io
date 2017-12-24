@@ -92,33 +92,21 @@
               var arr = ["Argentina", "Austria",
                          "Belgium",
                          "Canada", "Chile", "Czechia",
-                                         "Denmark",
-                                         "Egypt",
-                                         "France",
-                                         "Germany",
-                                         "Greece",
-                                         "Guernsey",
-                                         "Finland",
-                                         "Iceland",
-                                         "Ireland",
-                                         "Italy",
-                                         "Japan",
-                                         "Jersey",
-                                         "Kenya",
-                                         "liechtenstein",
-                                         "Lithuania",
-                                         "Mexico",
-                                         "Mongolia",
-                                         "Nepal",
-                                         "Netherlands",
-                                         "Norway",
-                                         "Poland",
-                                         "Spain",
-                                         "Sweden",
-                                         "Switzerland",
-                                         "Tanzania",
-                                         "United Kingdom",
-                                         "United States of America"];
+                         "Denmark",
+                         "Egypt",
+                         "France",
+                         "Germany", "Greece", "Guernsey",
+                         "Finland",
+                         "Iceland", "Ireland", "Italy",
+                         "Japan", "Jersey",
+                         "Kenya",
+                         "Liechtenstein", "Lithuania", "Luxemburg",
+                         "Mexico", "Mongolia",
+                         "Nepal", "Netherlands", "Norway",
+                         "Poland",
+                         "Spain", "Sweden", "Switzerland",
+                         "Tanzania",
+                         "United Kingdom", "United States of America"];
               var filter = ['in', 'NAME'];
               for(var i = 0; i < arr.length; i += 1) {
                 filter.push(arr[i]);
@@ -150,7 +138,19 @@
                 "filter": buildFilter(),
                 "paint": {
                   "fill-outline-color": "#484896",
-                  "fill-color": "#6e599f",
+                  "fill-color": {
+                    property: 'MAPCOLOR7',
+                    type: 'categorical',
+                    stops: [
+                      ['1', '#fbb03b'],
+                      ['2', '#223b53'],
+                      ['3', '#e55e5e'],
+                      ['4', '#3bb2d0'],
+                      ['5', '#3bb2d0'],
+                      ['6', '#3bb2d0'],
+                      ['7', '#ccc']
+                    ]
+                  },
                   "fill-opacity": 0.75
                 }
               });
