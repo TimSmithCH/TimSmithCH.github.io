@@ -6,8 +6,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    15.5271418,
-                    78.2082232,
+                    14.2158473,
+                    78.0627415,
                     0
                 ]
             },
@@ -26,7 +26,7 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    15.600071,
+                    15.5999851,
                     78.1666755,
                     0
                 ]
@@ -320,7 +320,7 @@
             },
             "properties": {
                 "name": "Longyearbyen sites",
-                "stroke": "#ffea00",
+                "stroke": "#d893b2",
                 "stroke-opacity": 1,
                 "stroke-width": 5.263
             }
@@ -1624,7 +1624,7 @@
             },
             "properties": {
                 "name": "Mine_7_Aurora",
-                "stroke": "#ffea00",
+                "stroke": "#d893b2",
                 "stroke-opacity": 1,
                 "stroke-width": 5.263
             }
@@ -5645,7 +5645,7 @@
                     "normal": "#line-CE93D8-4100-nodesc-normal",
                     "highlight": "#line-CE93D8-4100-nodesc-highlight"
                 },
-                "stroke": "#ce93d8",
+                "stroke": "#93cdd8",
                 "stroke-opacity": 1,
                 "stroke-width": 4.1
             }
