@@ -6,13 +6,73 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    15.9522511,
-                    78.1438842,
+                    15.5271418,
+                    78.2082232,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Barentsburg",
+                "styleUrl": "#icon-1899-0288D1-nodesc",
+                "styleHash": "-68688fa4",
+                "styleMapHash": {
+                    "normal": "#icon-1899-0288D1-nodesc-normal",
+                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.600071,
+                    78.1666755,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Trollsteinen",
+                "styleUrl": "#icon-1899-0288D1-nodesc",
+                "styleHash": "-68688fa4",
+                "styleMapHash": {
+                    "normal": "#icon-1899-0288D1-nodesc-normal",
+                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.0430002,
+                    78.14796
                     0
                 ]
             },
             "properties": {
                 "name": "Kjell Henriksen Observatory",
+                "styleUrl": "#icon-1899-0288D1-nodesc",
+                "styleHash": "-68688fa4",
+                "styleMapHash": {
+                    "normal": "#icon-1899-0288D1-nodesc-normal",
+                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.0306406,
+                    78.1528156,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "EISCAT Svalbard Radar",
                 "styleUrl": "#icon-1899-0288D1-nodesc",
                 "styleHash": "-68688fa4",
                 "styleMapHash": {
@@ -5468,6 +5528,81 @@
                 "stroke": "#ffea00",
                 "stroke-opacity": 1,
                 "stroke-width": 5.263
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        6.1069624,
+                        46.2370097,
+                        0
+                    ],
+                    [
+                        12.6485688,
+                        55.6180236,
+                        0
+                    ],
+                    [
+                        18.9140697,
+                        69.6819354,
+                        0
+                    ],
+                    [
+                        15.4633688,
+                        78.2460841,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "To Svalbard",
+                "styleUrl": "#line-CE93D8-4100-nodesc",
+                "styleHash": "-7970b72f",
+                "styleMapHash": {
+                    "normal": "#line-CE93D8-4100-nodesc-normal",
+                    "highlight": "#line-CE93D8-4100-nodesc-highlight"
+                },
+                "stroke": "#ce93d8",
+                "stroke-opacity": 1,
+                "stroke-width": 4.1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        15.4633688,
+                        78.2460841,
+                        0
+                    ],
+                    [
+                        11.0982212,
+                        60.1975501,
+                        0
+                    ],
+                    [
+                        6.1069624,
+                        46.2370097,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "To Geneva",
+                "styleUrl": "#line-CE93D8-4100-nodesc",
+                "styleHash": "-7970b72f",
+                "styleMapHash": {
+                    "normal": "#line-CE93D8-4100-nodesc-normal",
+                    "highlight": "#line-CE93D8-4100-nodesc-highlight"
+                },
+                "stroke": "#ce93d8",
+                "stroke-opacity": 1,
+                "stroke-width": 4.1
             }
         }
     ]
