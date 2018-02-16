@@ -47,15 +47,15 @@
             var layer_props = { Mongolia: { datafile: "Mongolia.geojson",
                                             zoom: 8,
                                             center: [88.5621603, 48.8269485],
-                                            dashstyle: [2, 1] },
+                                            dashstyle: [2, 2] },
                                 Svalbard: { datafile: "Svalbard.geojson",
                                             zoom: 8,
                                             center: [15.485589, 78.094824],
-                                            dashstyle: [4, 1] },
+                                            dashstyle: [4, 2] },
                                 Cirles: { datafile: "Cirles.geojson",
                                             zoom: 1,
                                             center: [0.0, 0.0],
-                                            dashstyle: [3, 1] } };
+                                            dashstyle: [6, 2] } };
             map.on('load', function () {
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {

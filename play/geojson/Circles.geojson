@@ -20,7 +20,7 @@
             },
             "properties": {
                 "name": "Artic Circle",
-                "stroke": "#93cdd8",
+                "stroke": "#93cdd8"
             }
         },
         {
@@ -42,7 +42,7 @@
             },
             "properties": {
                 "name": "Antartic Circle",
-                "stroke": "#93cdd8",
+                "stroke": "#93cdd8"
             }
         }
     ]
