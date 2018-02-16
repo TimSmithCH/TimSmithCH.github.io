@@ -1,0 +1,49 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        180.0000000,
+                        66.3333333,
+                        0
+                    ],
+                    [
+                        -180.0000000,
+                        66.3333333,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Artic Circle",
+                "stroke": "#93cdd8",
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        180.0000000,
+                        -66.3333333,
+                        0
+                    ],
+                    [
+                        -180.0000000,
+                        -66.3333333,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Antartic Circle",
+                "stroke": "#93cdd8",
+            }
+        }
+    ]
+}

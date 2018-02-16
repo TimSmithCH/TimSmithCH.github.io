@@ -5604,51 +5604,6 @@
                 "stroke-opacity": 1,
                 "stroke-width": 4.1
             }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        20.0000000,
-                        66.3333333,
-                        0
-                    ],
-                    [
-                        10.0000000,
-                        66.3333333,
-                        0
-                    ],
-                    [
-                        0.0000000,
-                        66.3333333,
-                        0
-                    ],
-                    [
-                        -10.0000000,
-                        66.3333333,
-                        0
-                    ],
-                    [
-                        -20.0000000,
-                        66.3333333,
-                        0
-                    ]
-                ]
-            },
-            "properties": {
-                "name": "Artic Circle",
-                "styleUrl": "#line-CE93D8-4100-nodesc",
-                "styleHash": "-7970b72f",
-                "styleMapHash": {
-                    "normal": "#line-CE93D8-4100-nodesc-normal",
-                    "highlight": "#line-CE93D8-4100-nodesc-highlight"
-                },
-                "stroke": "#93cdd8",
-                "stroke-opacity": 1,
-                "stroke-width": 4.1
-            }
         }
     ]
 }
