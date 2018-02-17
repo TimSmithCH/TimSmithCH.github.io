@@ -82,14 +82,10 @@
                       "type": "identity",
                       "property": "stroke"
                     },
-                    "line-dasharray": {
-                      "type": "identity",
-                      "property": "dashstyle"
-                    },
+                    "line-dasharray": layer_props[layer]["dashstyle"]
                   },
                   "filter": ["==", "$type", "LineString"]
                 });
-                //    "line-dasharray": layer_props[layer]["dashstyle"]
                 map.addLayer({
                   "id": layer + "points",
                   "type": "symbol",
