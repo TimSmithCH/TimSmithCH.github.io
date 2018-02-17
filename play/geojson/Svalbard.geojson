@@ -12,7 +12,7 @@
                 ]
             },
             "properties": {
-                "name": "Barentsburg",
+                "name": "Barentsburg"
             }
         },
         {
@@ -26,7 +26,7 @@
                 ]
             },
             "properties": {
-                "name": "Trollsteinen",
+                "name": "Trollsteinen"
             }
         },
         {
@@ -40,7 +40,7 @@
                 ]
             },
             "properties": {
-                "name": "Kjell Henriksen Observatory",
+                "name": "Kjell Henriksen Observatory"
             }
         },
         {
@@ -54,7 +54,7 @@
                 ]
             },
             "properties": {
-                "name": "EISCAT Svalbard Radar",
+                "name": "EISCAT Svalbard Radar"
             }
         },
         {
@@ -296,7 +296,7 @@
             },
             "properties": {
                 "name": "Longyearbyen sites",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -1598,7 +1598,7 @@
             },
             "properties": {
                 "name": "Mine_7_Aurora",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -3980,7 +3980,7 @@
             },
             "properties": {
                 "name": "Barentsburg",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -4767,7 +4767,7 @@
             },
             "properties": {
                 "name": "Longyearbyen exploration",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -5069,7 +5069,7 @@
             },
             "properties": {
                 "name": "Advent valley Aurora",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -5491,7 +5491,7 @@
             },
             "properties": {
                 "name": "Trollsteinen",
-                "stroke": "#00a000",
+                "stroke": "#00a000"
             }
         },
         {
@@ -5523,7 +5523,7 @@
             },
             "properties": {
                 "name": "To Svalbard",
-                "stroke": "#ce93d8",
+                "stroke": "#ce93d8"
             }
         },
         {
@@ -5550,7 +5550,7 @@
             },
             "properties": {
                 "name": "To Geneva",
-                "stroke": "#ce93d8",
+                "stroke": "#ce93d8"
             }
         }
     ]
