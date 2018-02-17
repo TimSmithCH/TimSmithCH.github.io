@@ -44,18 +44,22 @@
             // Add a scale
             map.addControl(new mapboxgl.ScaleControl());
             // Prepare layer properties object
-            var layer_props = { Mongolia: { datafile: "Mongolia.geojson",
-                                            zoom: 8,
-                                            center: [88.5621603, 48.8269485],
-                                            dashstyle: [2, 2] },
-                                Svalbard: { datafile: "Svalbard.geojson",
+            var layer_props = { Svalbard: { datafile: "Svalbard.geojson",
                                             zoom: 8,
                                             center: [15.485589, 78.094824],
                                             dashstyle: [4, 2] },
-                                Cirles: { datafile: "Cirles.geojson",
+                                Mongolia: { datafile: "Mongolia.geojson",
+                                            zoom: 8,
+                                            center: [88.5621603, 48.8269485],
+                                            dashstyle: [6, 2] },
+                                Iceland: { datafile: "Iceland.geojson",
+                                            zoom: 8,
+                                            center: [-21.485589, 64.094824],
+                                            dashstyle: [4, 2] },
+                                Circles: { datafile: "Circles.geojson",
                                             zoom: 1,
                                             center: [0.0, 0.0],
-                                            dashstyle: [6, 2] } };
+                                            dashstyle: [2, 2] } };
             map.on('load', function () {
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {

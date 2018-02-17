@@ -7,20 +7,20 @@
                 "type": "LineString",
                 "coordinates": [
                     [
-                        18.0000000,
-                        66.3333333,
+                        178.0000000,
+                        66.56,
                         0
                     ],
                     [
-                        -18.0000000,
-                        66.3333333,
+                        -178.0000000,
+                        66.56,
                         0
                     ]
                 ]
             },
             "properties": {
-                "name": "Artic Circle",
-                "stroke": "#93cdd8"
+                "name": "Arctic Circle",
+                "stroke": "#0404f9"
             }
         },
         {
@@ -29,20 +29,86 @@
                 "type": "LineString",
                 "coordinates": [
                     [
-                        18.0000000,
-                        -66.3333333,
+                        178.0000000,
+                        -66.56,
                         0
                     ],
                     [
-                        -18.0000000,
-                        -66.3333333,
+                        -178.0000000,
+                        -66.56,
                         0
                     ]
                 ]
             },
             "properties": {
-                "name": "Antartic Circle",
-                "stroke": "#93cdd8"
+                "name": "Antarctic Circle",
+                "stroke": "#0404f9"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        178.0000000,
+                        0.0,
+                        0
+                    ],
+                    [
+                        -178.0000000,
+                        0.0,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Equator",
+                "stroke": "#f96f04"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        178.0000000,
+                        23.44,
+                        0
+                    ],
+                    [
+                        -178.0000000,
+                        23.44,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Tropic of Cancer",
+                "stroke": "#f96f04"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        178.0000000,
+                        -23.44,
+                        0
+                    ],
+                    [
+                        -178.0000000,
+                        -23.44,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Tropic of Capricorn",
+                "stroke": "#f96f04"
             }
         }
     ]

@@ -1,0 +1,27 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        178.0000000,
+                        -23.44,
+                        0
+                    ],
+                    [
+                        -178.0000000,
+                        -23.44,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "T",
+                "stroke": "#f96f04"
+            }
+        }
+    ]
+}

@@ -13,12 +13,6 @@
             },
             "properties": {
                 "name": "Barentsburg",
-                "styleUrl": "#icon-1899-0288D1-nodesc",
-                "styleHash": "-68688fa4",
-                "styleMapHash": {
-                    "normal": "#icon-1899-0288D1-nodesc-normal",
-                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
-                }
             }
         },
         {
@@ -33,12 +27,6 @@
             },
             "properties": {
                 "name": "Trollsteinen",
-                "styleUrl": "#icon-1899-0288D1-nodesc",
-                "styleHash": "-68688fa4",
-                "styleMapHash": {
-                    "normal": "#icon-1899-0288D1-nodesc-normal",
-                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
-                }
             }
         },
         {
@@ -53,12 +41,6 @@
             },
             "properties": {
                 "name": "Kjell Henriksen Observatory",
-                "styleUrl": "#icon-1899-0288D1-nodesc",
-                "styleHash": "-68688fa4",
-                "styleMapHash": {
-                    "normal": "#icon-1899-0288D1-nodesc-normal",
-                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
-                }
             }
         },
         {
@@ -73,12 +55,6 @@
             },
             "properties": {
                 "name": "EISCAT Svalbard Radar",
-                "styleUrl": "#icon-1899-0288D1-nodesc",
-                "styleHash": "-68688fa4",
-                "styleMapHash": {
-                    "normal": "#icon-1899-0288D1-nodesc-normal",
-                    "highlight": "#icon-1899-0288D1-nodesc-highlight"
-                }
             }
         },
         {
@@ -320,9 +296,7 @@
             },
             "properties": {
                 "name": "Longyearbyen sites",
-                "stroke": "#d893b2",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -1624,9 +1598,7 @@
             },
             "properties": {
                 "name": "Mine_7_Aurora",
-                "stroke": "#d893b2",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -4008,9 +3980,7 @@
             },
             "properties": {
                 "name": "Barentsburg",
-                "stroke": "#ffea00",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -4797,9 +4767,7 @@
             },
             "properties": {
                 "name": "Longyearbyen exploration",
-                "stroke": "#ffea00",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -5101,9 +5069,7 @@
             },
             "properties": {
                 "name": "Advent valley Aurora",
-                "stroke": "#ffea00",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -5525,9 +5491,7 @@
             },
             "properties": {
                 "name": "Trollsteinen",
-                "stroke": "#ffea00",
-                "stroke-opacity": 1,
-                "stroke-width": 5.263
+                "stroke": "#00a000",
             }
         },
         {
@@ -5559,15 +5523,7 @@
             },
             "properties": {
                 "name": "To Svalbard",
-                "styleUrl": "#line-CE93D8-4100-nodesc",
-                "styleHash": "-7970b72f",
-                "styleMapHash": {
-                    "normal": "#line-CE93D8-4100-nodesc-normal",
-                    "highlight": "#line-CE93D8-4100-nodesc-highlight"
-                },
                 "stroke": "#ce93d8",
-                "stroke-opacity": 1,
-                "stroke-width": 4.1
             }
         },
         {
@@ -5594,15 +5550,7 @@
             },
             "properties": {
                 "name": "To Geneva",
-                "styleUrl": "#line-CE93D8-4100-nodesc",
-                "styleHash": "-7970b72f",
-                "styleMapHash": {
-                    "normal": "#line-CE93D8-4100-nodesc-normal",
-                    "highlight": "#line-CE93D8-4100-nodesc-highlight"
-                },
                 "stroke": "#ce93d8",
-                "stroke-opacity": 1,
-                "stroke-width": 4.1
             }
         }
     ]
