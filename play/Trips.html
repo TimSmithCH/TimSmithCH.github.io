@@ -7,8 +7,8 @@
     <title>Adventures</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -82,10 +82,14 @@
                       "type": "identity",
                       "property": "stroke"
                     },
-                    "line-dasharray": layer_props[layer]["dashstyle"]
+                    "line-dasharray": {
+                      "type": "identity",
+                      "property": "dashstyle"
+                    },
                   },
                   "filter": ["==", "$type", "LineString"]
                 });
+                //    "line-dasharray": layer_props[layer]["dashstyle"]
                 map.addLayer({
                   "id": layer + "points",
                   "type": "symbol",
