@@ -84,7 +84,7 @@
                     },
                     "line-dasharray": layer_props[layer]["dashstyle"]
                   },
-                  "filter": ["==", ["get", "type"], "LineString"]
+                  "filter": ["==", ["geometry-type"], "LineString"]
                 });
                 //  "filter": ["==", "$type", "LineString"]
                 map.addLayer({
