@@ -86,20 +86,19 @@
                   },
                   "filter": ["==", ["geometry-type"], "LineString"]
                 });
-                //  "filter": ["==", "$type", "LineString"]
                 map.addLayer({
                   "id": layer + "points",
                   "type": "symbol",
                   "source": layer,
                   "layout": {
-                    //"icon-image": "{icon}-15",
-                    "icon-image": "monument-15",
+                    "icon-image": "{icon}-15",
+                    //"icon-image": "monument-15",
                     "text-field": "{name}",
                     "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                     "text-offset": [0, 0.6],
                     "text-anchor": "top"
                   },
-                  "filter": ["==", "$type", "Point"]
+                  "filter": ["==", ["geometry-type"], "Point"]
                 });
               }
             });

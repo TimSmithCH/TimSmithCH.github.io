@@ -12,7 +12,8 @@
                 ]
             },
             "properties": {
-                "name": "Barentsburg"
+                "name": "Barentsburg",
+                "icon": "monument"
             }
         },
         {
@@ -26,7 +27,8 @@
                 ]
             },
             "properties": {
-                "name": "Trollsteinen"
+                "name": "Trollsteinen",
+                "icon": "mountain"
             }
         },
         {
@@ -40,7 +42,8 @@
                 ]
             },
             "properties": {
-                "name": "Kjell Henriksen Observatory"
+                "name": "Kjell Henriksen Observatory",
+                "icon": "star"
             }
         },
         {
@@ -54,7 +57,8 @@
                 ]
             },
             "properties": {
-                "name": "EISCAT Svalbard Radar"
+                "name": "EISCAT Svalbard Radar",
+                "icon": "star"
             }
         },
         {
