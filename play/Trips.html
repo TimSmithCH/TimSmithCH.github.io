@@ -47,15 +47,15 @@
             var layer_props = { Svalbard: { datafile: "Svalbard.geojson",
                                             zoom: 8,
                                             center: [15.485589, 78.094824],
-                                            dashstyle: [2, 2] },
+                                            dashstyle: [10, 0] },
                                 Mongolia: { datafile: "Mongolia.geojson",
                                             zoom: 8,
                                             center: [88.5621603, 48.8269485],
-                                            dashstyle: [2, 2] },
+                                            dashstyle: [10, 0] },
                                 Iceland: { datafile: "Iceland.geojson",
                                             zoom: 8,
                                             center: [-21.485589, 64.094824],
-                                            dashstyle: [2, 2] },
+                                            dashstyle: [10, 0] },
                                 Circles: { datafile: "Circles.geojson",
                                             zoom: 1,
                                             center: [0.0, 0.0],
@@ -78,7 +78,7 @@
                   },
                   "paint": {
                     "line-width": 4,
-                    "line-color": {
+                    "line-color": {   // Data-driven styling //
                       "type": "identity",
                       "property": "stroke"
                     },
@@ -91,9 +91,9 @@
                   "type": "symbol",
                   "source": layer,
                   "layout": {
-                    "icon-image": "{icon}-15",
+                    "icon-image": "{icon}-15",   // Data-driven styling //
                     //"icon-image": "monument-15",
-                    "text-field": "{name}",
+                    "text-field": "{name}",   // Data-driven styling //
                     "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                     "text-offset": [0, 0.6],
                     "text-anchor": "top"

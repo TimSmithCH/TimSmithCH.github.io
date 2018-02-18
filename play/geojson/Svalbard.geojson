@@ -6,6 +6,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    15.4891309
+                    78.2356772,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Global Seed Vault",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     14.2158473,
                     78.0627415,
                     0
