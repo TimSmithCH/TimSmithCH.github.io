@@ -84,8 +84,9 @@
                     },
                     "line-dasharray": layer_props[layer]["dashstyle"]
                   },
-                  "filter": ["==", "$type", "LineString"]
+                  "filter": ["==", ["get", "type"], "LineString"]
                 });
+                //  "filter": ["==", "$type", "LineString"]
                 map.addLayer({
                   "id": layer + "points",
                   "type": "symbol",
