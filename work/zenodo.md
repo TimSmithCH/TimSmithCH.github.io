@@ -1,4 +1,5 @@
 ## Interesting records:
+Good Zenodo summary record: https://fairsharing.org/FAIRsharing.wy4egf
 ---
 ## Mentioned in Recommendations:
 - Alliance of German Science Organizations: http://gfzpublic.gfz-potsdam.de/pubman/item/escidoc:3055893:2/component/escidoc:3055894/handreichung%20forschungsdatenmanagement.pdf
