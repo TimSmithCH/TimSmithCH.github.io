@@ -1,7 +1,7 @@
 ## Interesting records:
-FairShairing: https://fairsharing.org/FAIRsharing.wy4egf
-Re3data: https://www.re3data.org/repository/r3d100010468
-DataCite: https://stats.datacite.org/?fq=datacentre_facet%3A%22CERN.ZENODO+-+ZENODO+-+Research.+Shared.%22&#tab-prefixes
+- FairShairing: https://fairsharing.org/FAIRsharing.wy4egf 
+- Re3data: https://www.re3data.org/repository/r3d100010468 
+- DataCite: https://stats.datacite.org/?fq=datacentre_facet%3A%22CERN.ZENODO+-+ZENODO+-+Research.+Shared.%22&#tab-prefixes 
 
 ---
 ## Mentioned in Recommendations:
