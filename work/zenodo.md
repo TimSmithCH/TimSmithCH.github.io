@@ -1,5 +1,8 @@
 ## Interesting records:
-Good Zenodo summary record: https://fairsharing.org/FAIRsharing.wy4egf
+FairShairing: https://fairsharing.org/FAIRsharing.wy4egf
+Re3data: https://www.re3data.org/repository/r3d100010468
+DataCite: https://stats.datacite.org/?fq=datacentre_facet%3A%22CERN.ZENODO+-+ZENODO+-+Research.+Shared.%22&#tab-prefixes
+
 ---
 ## Mentioned in Recommendations:
 - Alliance of German Science Organizations: http://gfzpublic.gfz-potsdam.de/pubman/item/escidoc:3055893:2/component/escidoc:3055894/handreichung%20forschungsdatenmanagement.pdf
