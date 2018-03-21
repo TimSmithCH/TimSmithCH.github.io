@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flying</title>
+    <meta name="description" content="TrackMap">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/trackmap.css">
+  </head>
+
+  <body class="wrapper">
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+    <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <header class="header">
+      Flying Places
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 4 // starting zoom
+            });
+            
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
+            
+            map.on('load', function () {
+              map.addLayer({
+                "id": "points",
+                "type": "symbol",
+                "source": {
+                  "type": "geojson",
+                  "data": {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [51.115978, 6.218446]
+                        },
+                        "properties": {
+                          "name": "RAF Wildenrath",
+                          "icon": "attraction"
+                        }
+                    }]
+                  }
+                },
+                "layout": {
+                  "icon-image": "{icon}-15",   // Data-driven styling //
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                }
+              });
+            });
+      </script>
+    </main>
+
+    <footer class="footer">
+        TrackMap: &copy; Tim Smith CC-BY-4.0
+    </footer>
+  </body>
+</html>
