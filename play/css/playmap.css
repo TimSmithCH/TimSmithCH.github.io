@@ -45,7 +45,7 @@ body {
 }
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 6px;
     flex: 1 1 auto;
     justify-content: flex-start; /* align items in Main Axis */
@@ -56,6 +56,9 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
 }
 
 /* Alternatives: Large format if large screen detected */
@@ -72,7 +75,8 @@ body {
   /* We tell both sidebars to share a row */
   .aside { flex: 1 auto; }
   .main {
-      padding: 24px;
+    flex-direction: row;
+    padding: 24px;
   }
   .main-content {
     flex: 4 0px;
