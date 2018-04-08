@@ -56,9 +56,8 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
+    flex-wrap: wrap;   /* Tell sidebars to not share a row */
 }
-  /* We tell sidebars to not share a row */
-  .aside { flex-wrap: wrap; }
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */
@@ -76,7 +75,10 @@ body {
   .main {
       padding: 24px;
   }
-  .main-content { flex: 4 0px; }
+  .main-content {
+    flex: 4 0px;
+    flex-wrap: nowrap;   /* Tell sidebars to not share a row */
+  }
   .aside-1 { order: 1; }
   .main-content { order: 2; }
   .aside-2 { order: 3; }
