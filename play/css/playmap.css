@@ -47,10 +47,11 @@ body {
     display: flex;
     flex-direction: row;
     padding: 6px;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     justify-content: flex-start; /* align items in Main Axis */
     align-items: stretch; /* align items in Cross Axis */
     align-content: stretch; /* Extra space in Cross Axis */
+    flex-wrap: wrap;
 }
 .main-content {
     display: flex;
@@ -73,6 +74,7 @@ body {
   .aside { flex: 1 auto; }
   .main {
       padding: 24px;
+    flex-wrap: nowrap;
   }
   .main-content {
     flex: 4 0px;
