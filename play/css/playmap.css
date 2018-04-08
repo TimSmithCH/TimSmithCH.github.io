@@ -57,8 +57,8 @@ body {
     flex-direction: row;
     flex: 1 1 auto;
 }
-  /* We tell both sidebars to not share a row */
-  .aside { flex: 0 auto; }
+  /* We tell sidebars to not share a row */
+  .aside { flex-wrap: wrap; }
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */
