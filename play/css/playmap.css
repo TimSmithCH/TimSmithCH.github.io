@@ -76,7 +76,7 @@ body {
   .main {
       padding: 24px;
   }
-  .main-content { flex: 2 0px; }
+  .main-content { flex: 3 0px; }
   .aside-1 { order: 1; }
   .main-content { order: 2; }
   .aside-2 { order: 3; }
