@@ -54,9 +54,10 @@ body {
 }
 .main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1 1 auto;
 }
+.aside { width: 200px; }
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */
@@ -75,7 +76,6 @@ body {
       padding: 24px;
   }
   .main-content {
-    flex-direction: row;
     flex: 4 0px;
   }
   .aside-1 { order: 1; }
