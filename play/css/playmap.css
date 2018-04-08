@@ -57,6 +57,7 @@ body {
     flex-direction: row;
     flex: 0 1 auto;
 }
+.aside { flex: 0 1 auto; }
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */
