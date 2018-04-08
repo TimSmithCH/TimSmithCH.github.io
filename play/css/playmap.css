@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 6px;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     justify-content: flex-start; /* align items in Main Axis */
     align-items: stretch; /* align items in Cross Axis */
     align-content: stretch; /* Extra space in Cross Axis */
@@ -55,9 +55,8 @@ body {
 .main-content {
     display: flex;
     flex-direction: row;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
 }
-.aside { flex: 0 1 auto; }
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */
