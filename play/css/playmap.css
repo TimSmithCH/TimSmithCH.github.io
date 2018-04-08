@@ -56,7 +56,6 @@ body {
     display: flex;
     flex-direction: row;
     flex: 0 1 auto;
-    flex-wrap: wrap;   /* Tell sidebars to not share a row */
 }
 
 /* Alternatives: Large format if large screen detected */
@@ -77,8 +76,6 @@ body {
   }
   .main-content {
     flex: 4 0px;
-    flex: 1 1 auto;
-    flex-wrap: nowrap;   /* Tell sidebars to not share a row */
   }
   .aside-1 { order: 1; }
   .main-content { order: 2; }
