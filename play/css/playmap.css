@@ -77,14 +77,14 @@ body {
   .main {
     flex-direction: row;
     padding: 24px;
+    img {
+      max-width: 100%;
+    }
   }
   .main-content {
     flex: 4 0px;
   }
   .aside-1 { order: 1; }
-  .image {
-    max-width: 100%;
-  }
   .main-content { order: 2; }
   .aside-2 { order: 3; }
 }
