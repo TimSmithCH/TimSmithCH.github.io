@@ -81,7 +81,10 @@ body {
   .main-content {
     flex: 4 0px;
   }
-  .aside-1 { order: 1; img {object-fit: contain;}}
+  .aside-1 { order: 1; }
+  .image {
+    max-width: 100%;
+  }
   .main-content { order: 2; }
   .aside-2 { order: 3; }
 }
