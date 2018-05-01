@@ -76,10 +76,14 @@ body {
   .aside {
     flex-direction: column;
     flex: 1 2 0px;
+    padding: 6px;
     img {
       width: 200px;
       vertical-align:middle;
     }
+  }
+  .image {
+    flex: 0 1 0px;
   }
   .main {
     flex-direction: row;
