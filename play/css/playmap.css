@@ -85,6 +85,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
   }
   .pic {
     flex: 0 1 0px;
