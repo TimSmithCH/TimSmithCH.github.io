@@ -76,6 +76,7 @@ body {
   .aside { flex: 1 2 0px;
     img {
       width: 200px;
+      vertical-align:middle;
     }
   }
   .main {
