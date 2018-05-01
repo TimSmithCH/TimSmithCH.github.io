@@ -75,7 +75,7 @@ body {
   /* We tell both sidebars to share a row */
   .aside { flex: 1 2 0px;
     img {
-      max-width: 120px;
+      width: 200px;
     }
   }
   .main {
