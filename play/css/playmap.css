@@ -77,13 +77,13 @@ body {
     flex: 1 2 0px;
     padding: 6px;
     img {
-      width: 200px;
+      max-width: 200px;
       vertical-align:middle;
     }
   }
   .images {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
   .image {
     flex: 0 1 0px;
