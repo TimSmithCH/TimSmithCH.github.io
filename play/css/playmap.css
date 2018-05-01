@@ -83,6 +83,7 @@ body {
   }
   .pics {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch; /* align items in Cross Axis */
