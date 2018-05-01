@@ -73,7 +73,7 @@ body {
     font-size: 24px;
   }
   /* We tell both sidebars to share a row */
-  .aside { flex: 1 2 0;
+  .aside { flex: 1 2 16%;
     img {
       max-width: contain;
     }
