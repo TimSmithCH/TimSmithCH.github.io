@@ -74,14 +74,16 @@ body {
   }
   /* We tell both sidebars to share a row */
   .aside {
-    flex-direction: column;
     flex: 1 2 0px;
     padding: 6px;
-    justify-content: space-around;
     img {
       width: 200px;
       vertical-align:middle;
     }
+  }
+  .images {
+    flex-direction: column;
+    justify-content: space-around;
   }
   .image {
     flex: 0 1 0px;
