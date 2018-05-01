@@ -87,7 +87,7 @@ body {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: stretch; /* align items in Cross Axis */
     align-content: stretch; /* Extra space in Cross Axis */
   }
