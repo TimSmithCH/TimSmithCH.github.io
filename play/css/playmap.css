@@ -81,12 +81,12 @@ body {
       vertical-align:middle;
     }
   }
-  .images {
+  .pics {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
-  .image {
+  .pic {
     flex: 0 1 0px;
   }
   .main {
