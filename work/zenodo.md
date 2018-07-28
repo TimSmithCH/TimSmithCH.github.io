@@ -1,4 +1,4 @@
-## Interesting records:
+## Interesting references to Zenodo:
 - FairShairing: https://fairsharing.org/FAIRsharing.wy4egf 
 - Re3data: https://www.re3data.org/repository/r3d100010468 
 - DataCite: https://stats.datacite.org/?fq=datacentre_facet%3A%22CERN.ZENODO+-+ZENODO+-+Research.+Shared.%22&#tab-prefixes 
@@ -26,3 +26,10 @@
 # Archived in Zenodo:
 - GitHub: 
 - RIO Journal: https://riojournal.com in zenodo: 
+
+---
+## Interesting datasets/records in Zenodo:
+- Liquid water on Mars:
+  - https://www.bbc.co.uk/news/science-environment-44952710
+  - http://science.sciencemag.org/content/early/2018/07/24/science.aar7268
+  - https://zenodo.org/record/1285179
