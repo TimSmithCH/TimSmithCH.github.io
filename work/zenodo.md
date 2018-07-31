@@ -36,3 +36,4 @@
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
+- Seaborn: https://zenodo.org/record/1313201
