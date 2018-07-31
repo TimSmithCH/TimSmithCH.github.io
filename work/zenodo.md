@@ -33,3 +33,6 @@
   - https://www.bbc.co.uk/news/science-environment-44952710
   - http://science.sciencemag.org/content/early/2018/07/24/science.aar7268
   - https://zenodo.org/record/1285179
+
+## Interesting software in Zenodo:
+- SciPy: https://zenodo.org/record/1241501
