@@ -36,4 +36,5 @@
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
+- MatPlotLib: https://zenodo.org/record/1202077
 - Seaborn: https://zenodo.org/record/1313201
