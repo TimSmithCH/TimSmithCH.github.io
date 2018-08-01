@@ -18,14 +18,17 @@
 - RIO Journals: https://riojournal.com/about#Open_Data_and_Software_Publishing_and_Sharing
 - SpringerNature Journals: https://www.springernature.com/de/authors/research-data-policy/repositories-general/12327166
 - Wiley Geoscience Data Journal: http://rmets.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)2049-6060/features/data-centres-and-repositories.html
+- https://linkedresearch.org/resources
 
 # Built on Zenodo:
 - Journal of Brief Ideas: http://beta.briefideas.org in zenodo: https://zenodo.org/communities/briefideas
 - Dissemin: https://dissem.in in zenodo:
+- ReScience: https://rescience.github.io/read/
 
 # Archived in Zenodo:
 - GitHub: 
 - RIO Journal: https://riojournal.com in zenodo: 
+- ROpenSci: https://zenodo.org/search?page=1&size=20&q=ropensci
 
 ---
 ## Interesting datasets/records in Zenodo:
@@ -38,5 +41,5 @@
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
-- MatPlotLib: https://zenodo.org/record/1202077
+- MatPlotLib: https://zenodo.org/record/1202077 https://matplotlib.org/citing.html
 - Seaborn: https://zenodo.org/record/1313201
