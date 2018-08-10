@@ -22,8 +22,9 @@
 
 # Built on Zenodo:
 - Journal of Brief Ideas: http://beta.briefideas.org in zenodo: https://zenodo.org/communities/briefideas
+- Journal of Open Source Software: https://joss.theoj.org in zenodo: 
+- ReScience: https://rescience.github.io/read/ in zenodo: https://zenodo.org/communities/rescience
 - Dissemin: https://dissem.in in zenodo:
-- ReScience: https://rescience.github.io/read/
 
 # Archived in Zenodo:
 - GitHub: 
