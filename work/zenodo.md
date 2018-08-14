@@ -25,6 +25,7 @@
 - Journal of Open Source Software: https://joss.theoj.org in zenodo: 
 - ReScience: https://rescience.github.io/read/ in zenodo: https://zenodo.org/communities/rescience
 - Dissemin: https://dissem.in in zenodo:
+- https://andrewgyork.github.io/publication_template/
 
 # Archived in Zenodo:
 - GitHub: 
