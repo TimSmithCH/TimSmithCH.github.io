@@ -22,5 +22,6 @@
 - The only way to do great work is to love the work you do	Steve Jobs
 - You don't need a title to be a leader	Napoleon Bonaparte
 - We can't solve problems by using the same kind of thinking we used when we created them	Albert Einstein
+- (You cannot solve a problem from the same consciousness that created it. You must learn to see the world anew.)
 - Art is how we decorate space; Music is how we decorate time  Alex Clay Hutchings
 - I would rather have questions that cant be answered than answers that cant be questioned - Richard Feynman
