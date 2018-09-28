@@ -32,6 +32,7 @@
 - GitHub: 
 - RIO Journal: https://riojournal.com in zenodo: 
 - ROpenSci: https://zenodo.org/search?page=1&size=20&q=ropensci
+- Open Grants: https://www.ogrants.org (published in RIOJournal, archived in Zenodo)
 
 ---
 ## Interesting datasets/records in Zenodo:
