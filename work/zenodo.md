@@ -48,5 +48,7 @@
 - MatPlotLib: https://zenodo.org/record/1202077 https://matplotlib.org/citing.html
 - Seaborn: https://zenodo.org/record/1313201
 
+---
 ## Zenodo Clones
 - Rodare: https://rodare.hzdr.de
+- Indigo-DataCloud OD service launcher: https://www.indigo-datacloud.eu/deploy-open-data-repository-cloud-using-marathon
