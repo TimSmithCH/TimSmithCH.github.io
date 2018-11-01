@@ -20,7 +20,7 @@
 - Wiley Geoscience Data Journal: http://rmets.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)2049-6060/features/data-centres-and-repositories.html
 - https://linkedresearch.org/resources
 
-# Built on Zenodo:
+## Built on Zenodo:
 - Journal of Brief Ideas: http://beta.briefideas.org in zenodo: https://zenodo.org/communities/briefideas
 - Journal of Open Source Software: https://joss.theoj.org in zenodo: 
 - ReScience: https://rescience.github.io/read/ in zenodo: https://zenodo.org/communities/rescience
@@ -28,7 +28,7 @@
 - http://falsifiable.us 
 - https://andrewgyork.github.io/publication_template/
 
-# Archived in Zenodo:
+## Archived in Zenodo:
 - GitHub: 
 - RIO Journal: https://riojournal.com in zenodo: 
 - ROpenSci: https://zenodo.org/search?page=1&size=20&q=ropensci
@@ -47,3 +47,6 @@
 - SciPy: https://zenodo.org/record/1241501
 - MatPlotLib: https://zenodo.org/record/1202077 https://matplotlib.org/citing.html
 - Seaborn: https://zenodo.org/record/1313201
+
+## Zenodo Clones
+- Rodare: https://rodare.hzdr.de
