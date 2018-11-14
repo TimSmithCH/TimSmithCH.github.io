@@ -42,6 +42,7 @@
   - https://zenodo.org/record/1285179
 - Physical Constants: https://zenodo.org/record/22826
 - Turning FAIR data into reality: https://zenodo.org/record/1285272
+- CERN, a bridge between cultures: https://zenodo.org/record/1196811
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
