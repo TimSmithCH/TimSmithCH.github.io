@@ -27,6 +27,7 @@
 - Dissemin: https://dissem.in in zenodo:
 - http://falsifiable.us 
 - https://andrewgyork.github.io/publication_template/
+- http://boutiques.github.io 
 
 ## Archived in Zenodo:
 - GitHub: 
