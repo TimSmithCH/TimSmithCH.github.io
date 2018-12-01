@@ -219,7 +219,7 @@ function makeChart (data, markers) {
 }
 
 var parseDate  = d3.time.format('%Y-%m-%d').parse;
-d3.json('data.json', function (error, rawData) {
+d3.json('Escalades.json', function (error, rawData) {
   if (error) {
     console.error(error);
     return;
