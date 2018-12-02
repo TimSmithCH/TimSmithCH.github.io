@@ -6,17 +6,17 @@
   },
   {
     "date": "1994-12-03",
-    "type": "Client",
+    "type": "Server",
     "version": "HomII"
   },
   {
     "date": "2004-12-04",
-    "type": "Server",
+    "type": "Client",
     "version": "HomIII"
   },
   {
     "date": "2014-12-06",
-    "type": "Client",
+    "type": "Server",
     "version": "HomIV"
   }
 ]
