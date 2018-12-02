@@ -1,4 +1,7 @@
 function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
+  svg.append('clipPath')	
+    .attr('id', 'axes-clip');
+  
   var axes = svg.append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + chartHeight + ')')
