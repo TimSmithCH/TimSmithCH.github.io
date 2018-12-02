@@ -42,6 +42,13 @@ function drawPaths (svg, data, x, y) {
     .attr('class', 'median-line')
     .attr('d', medianLine)
     .attr('clip-path', 'url(#rect-clip)');
+  
+  svg.selectAll(".point")
+      .data(data)
+    .enter().append("path")
+      .attr("class", "point")
+      .attr("d", d3.svg.symbol().type("triangle-up"))
+      .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 }
 
 function addMarker (marker, svg, chartHeight, x) {
