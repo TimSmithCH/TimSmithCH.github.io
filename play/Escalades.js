@@ -74,12 +74,7 @@ function addMarker (marker, svg, chartHeight, x) {
 
   markerG.append('text')
     .attr('x', radius)
-    .attr('y', radius*0.9)
-    .text(marker.type);
-
-  markerG.append('text')
-    .attr('x', radius)
-    .attr('y', radius*1.5)
+    .attr('y', radius*1.1)
     .text(marker.version);
 }
 
