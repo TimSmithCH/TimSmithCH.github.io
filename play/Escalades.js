@@ -30,48 +30,6 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .attr('dy', '.71em')
       .style('text-anchor', 'end')
       .text('Time (s)');
-
-  var legend = svg.append('g')
-    .attr('class', 'legend')
-    .attr('transform', 'translate(' + (chartWidth - legendWidth) + ', 0)');
-
-  legend.append('rect')
-    .attr('class', 'legend-bg')
-    .attr('width',  legendWidth)
-    .attr('height', legendHeight);
-
-  legend.append('rect')
-    .attr('class', 'outer')
-    .attr('width',  75)
-    .attr('height', 20)
-    .attr('x', 10)
-    .attr('y', 10);
-
-  legend.append('text')
-    .attr('x', 115)
-    .attr('y', 25)
-    .text('5% - 95%');
-
-  legend.append('rect')
-    .attr('class', 'inner')
-    .attr('width',  75)
-    .attr('height', 20)
-    .attr('x', 10)
-    .attr('y', 40);
-
-  legend.append('text')
-    .attr('x', 115)
-    .attr('y', 55)
-    .text('25% - 75%');
-
-  legend.append('path')
-    .attr('class', 'median-line')
-    .attr('d', 'M10,80L85,80');
-
-  legend.append('text')
-    .attr('x', 115)
-    .attr('y', 85)
-    .text('Median');
 }
 
 function drawPaths (svg, data, x, y) {
