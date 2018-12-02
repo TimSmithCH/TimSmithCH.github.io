@@ -34,7 +34,7 @@ function drawPaths (svg, data, x, y) {
   var medianLine = d3.svg.line()
     .interpolate('basis')
     .x(function (d) { return x(d.date); })
-    .y(function (d) { return y(d.pct50); });
+    .y(function (d) { return y(d.time); });
 
   svg.datum(data);
 
@@ -99,8 +99,8 @@ function makeChart (data, markers) {
 
   var x = d3.time.scale().range([0, chartWidth])
             .domain(d3.extent(data, function (d) { return d.date; })),
-      y = d3.scale.linear().range([chartHeight, 0])
-            .domain([0, d3.max(data, function (d) { return d.pct95; })]);
+      y = d3.time.scale().range([chartHeight, 0])
+            .domain(d3.extent(data, function (d) { return d.time; }));
 
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
@@ -126,6 +126,7 @@ function makeChart (data, markers) {
 }
 
 var parseDate  = d3.time.format('%Y-%m-%d').parse;
+var parseTime  = d3.time.format('%h:%m:%s').parse;
 d3.json('Escalades.json', function (error, rawData) {
   if (error) {
     console.error(error);
@@ -135,11 +136,7 @@ d3.json('Escalades.json', function (error, rawData) {
   var data = rawData.map(function (d) {
     return {
       date:  parseDate(d.date),
-      pct05: d.pct05 / 1000,
-      pct25: d.pct25 / 1000,
-      pct50: d.pct50 / 1000,
-      pct75: d.pct75 / 1000,
-      pct95: d.pct95 / 1000
+      time:  parseTime(d.time)
     };
   });
 
