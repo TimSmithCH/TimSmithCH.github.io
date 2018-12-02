@@ -1,22 +1,5 @@
 function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
-  var legendWidth  = 200,
-      legendHeight = 100;
-
-  // clipping to make sure nothing appears behind legend
-  svg.append('clipPath')
-    .attr('id', 'axes-clip')
-    .append('polygon')
-      .attr('points', (-margin.left)                 + ',' + (-margin.top)                 + ' ' +
-                      (chartWidth - legendWidth - 1) + ',' + (-margin.top)                 + ' ' +
-                      (chartWidth - legendWidth - 1) + ',' + legendHeight                  + ' ' +
-                      (chartWidth + margin.right)    + ',' + legendHeight                  + ' ' +
-                      (chartWidth + margin.right)    + ',' + (chartHeight + margin.bottom) + ' ' +
-                      (-margin.left)                 + ',' + (chartHeight + margin.bottom));
-
   var axes = svg.append('g')
-    .attr('clip-path', 'url(#axes-clip)');
-
-  axes.append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + chartHeight + ')')
     .call(xAxis);
