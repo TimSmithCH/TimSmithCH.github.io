@@ -37,13 +37,16 @@ function drawPaths (svg, data, x, y) {
     .y(function (d) { return y(d.time); });
 
   svg.datum(data);
-
-  svg.append('path')
-    .attr('class', 'median-line')
-    .attr('d', medianLine)
-    .attr('clip-path', 'url(#rect-clip)');
   
-  svg.selectAll(".point")
+  var clipping = svg.append("g")
+        .attr("clip-path", "url(#clip)");
+
+  clipping.append('path')
+    .attr('class', 'median-line')
+    .attr('d', medianLine);
+//    .attr('clip-path', 'url(#rect-clip)');
+  
+  clipping.selectAll(".point")
       .data(data)
     .enter().append("path")
       .attr("class", "point")
