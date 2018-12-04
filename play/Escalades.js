@@ -49,9 +49,7 @@ function drawPaths (svg, data, x, y) {
       .attr("class", "point")
       .attr('clip-path', 'url(#rect-clip)')
       .attr("d", d3.svg.symbol().type("triangle-up"))
-      .x(function (d) { return x(d.date); })
-      .y(function (d) { return y(d.time); });
-//      .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; });
 }
 
 function addMarker (marker, svg, chartHeight, x) {
