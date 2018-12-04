@@ -1,22 +1,22 @@
 [
   {
     "date": "1991-12-23",
-    "type": "Client",
+    "type": "Server",
     "version": "Hom I"
   },
   {
     "date": "1994-12-03",
-    "type": "Server",
+    "type": "Client",
     "version": "Hom II"
   },
   {
     "date": "2004-12-04",
-    "type": "Client",
+    "type": "Server",
     "version": "Hom III"
   },
   {
     "date": "2014-12-06",
-    "type": "Server",
+    "type": "Client",
     "version": "Hom IV"
   }
 ]
