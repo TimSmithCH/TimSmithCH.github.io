@@ -47,6 +47,7 @@ function drawPaths (svg, data, x, y) {
       .data(data)
     .enter().append("path")
       .attr("class", "point")
+      .attr('clip-path', 'url(#rect-clip)')
       .attr("d", d3.svg.symbol().type("triangle-up"))
       .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 }
