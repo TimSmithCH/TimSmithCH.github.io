@@ -39,7 +39,7 @@ function drawPaths (svg, data, x, y) {
   svg.datum(data);
   
   var clipping = svg.append("g")
-        .attr("clip-path", "url(#clip)");
+        .attr("clip-path", "url(#rect-clip)");
 
   clipping.append('path')
     .attr('class', 'median-line')
