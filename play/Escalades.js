@@ -133,7 +133,7 @@ function makeChart (data, markers) {
 }
 
 var parseDate  = d3.time.format('%Y-%m-%d').parse;
-var parseTime  = d3.time.format('%M:%S').parse;
+var parseTime  = d3.time.format('%H:%M:%S').parse;
 d3.json('Escalades.json', function (error, rawData) {
   if (error) {
     console.error(error);
