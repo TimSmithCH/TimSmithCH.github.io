@@ -35,6 +35,10 @@ svg {
   stroke: rgba(96, 96, 255, 0.8);
 }
 
+.point {
+  fill: steelblue;
+  stroke: #000;
+}
 .median-line,
 .legend .median-line {
   fill: none;
