@@ -112,7 +112,8 @@ function makeChart (data, markers) {
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
       yAxis = d3.svg.axis().scale(y).orient('left')
-                .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
+                .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10)
+                .tickFormat(d3.time.format('%M:%S'));
 
   var svg = d3.select('body').append('svg')
     .attr('width',  svgWidth)
