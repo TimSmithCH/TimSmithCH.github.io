@@ -59,7 +59,7 @@ function addMarker (marker, svg, chartHeight, x) {
   var radius = 32,
       xPos = x(marker.date) - radius - 3,
       yPosStart = chartHeight - radius - 3,
-      yPosEnd = (marker.type === 'Client' ? 80 : 200) + radius - 3;
+      yPosEnd = (marker.type === 'Client' ? 200 : 300) + radius - 3;
 
   var markerG = svg.append('g')
     .attr('class', 'marker '+marker.type.toLowerCase())
