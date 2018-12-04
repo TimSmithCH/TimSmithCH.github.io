@@ -32,7 +32,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
 
 function drawPaths (svg, data, x, y) {
   var medianLine = d3.svg.line()
-    .interpolate('basis')
+    .interpolate('cardinal')
     .x(function (d) { return x(d.date); })
     .y(function (d) { return y(d.time); });
 
