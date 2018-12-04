@@ -32,7 +32,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
 
 function drawPaths (svg, data, x, y) {
   var medianLine = d3.svg.line()
-    .interpolate('basis')
+    .interpolate('bundle')
     .x(function (d) { return x(d.date); })
     .y(function (d) { return y(d.time); });
 
@@ -106,9 +106,9 @@ function makeChart (data, markers) {
       chartHeight = svgHeight - margin.top  - margin.bottom;
 
   var x = d3.time.scale().range([0, chartWidth])
-            .domain(d3.extent(data, function (d) { return d.date; })),
+            .domain(d3.extent(data, function (d) { return d.date; })).nice(),
       y = d3.time.scale().range([chartHeight, 0])
-            .domain(d3.extent(data, function (d) { return d.time; }));
+            .domain(d3.extent(data, function (d) { return d.time; })).nice();
 
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
