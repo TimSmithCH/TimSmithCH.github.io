@@ -27,7 +27,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .attr('y', 6)
       .attr('dy', '.71em')
       .style('text-anchor', 'end')
-      .text('Time (s)');
+      .text('Time (m:s)');
 }
 
 function drawPaths (svg, data, x, y) {
@@ -47,7 +47,7 @@ function drawPaths (svg, data, x, y) {
       .data(data)
     .enter().append("path")
       .attr("class", "point")
-      .attr("d", d3.svg.symbol().type("triangle-up"))
+      .attr("d", d3.svg.symbol().size(100).type("triangle-up"))
       .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
       .attr('clip-path', 'url(#rect-clip)');
 }
