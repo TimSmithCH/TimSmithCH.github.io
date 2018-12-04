@@ -47,16 +47,16 @@ function drawPaths (svg, data, x, y) {
       .data(data)
     .enter().append("path")
       .attr("class", "point")
-      .attr('clip-path', 'url(#rect-clip)')
       .attr("d", d3.svg.symbol().type("triangle-up"))
-      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; });
+      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
+      .attr('clip-path', 'url(#rect-clip)');
 }
 
 function addMarker (marker, svg, chartHeight, x) {
   var radius = 32,
       xPos = x(marker.date) - radius - 3,
       yPosStart = chartHeight - radius - 3,
-      yPosEnd = (marker.type === 'Client' ? 80 : 160) + radius - 3;
+      yPosEnd = (marker.type === 'Client' ? 80 : 200) + radius - 3;
 
   var markerG = svg.append('g')
     .attr('class', 'marker '+marker.type.toLowerCase())
