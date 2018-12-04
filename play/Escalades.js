@@ -47,9 +47,9 @@ function drawPaths (svg, data, x, y) {
       .data(data)
     .enter().append("path")
       .attr("class", "point")
-      .attr("d", d3.svg.symbol().size(100).type("triangle-up"))
-      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; })
-      .attr('clip-path', 'url(#rect-clip)');
+      .attr("d", d3.svg.symbol().size(500).type("triangle-up"))
+      .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.time) + ")"; });
+//      .attr('clip-path', 'url(#rect-clip)');
 }
 
 function addMarker (marker, svg, chartHeight, x) {
