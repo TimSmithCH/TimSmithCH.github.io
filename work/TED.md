@@ -1,8 +1,10 @@
 - TED Ed thanks to:
   - [Caitlin Kraft-Buchman](https://genderchampions.com/champions/caitlin-kraft-buchman)
   - Claudia Marcelloni
+  - https://ed.ted.com/lessons/exploration-on-the-big-data-frontier-tim-smith
 - TEDxChamonix thanks to:
-  - []()
+  - [Kimberly VanLandingham](http://presentationtrainingswitzerland.ch)
   - Sally Walkerman
+  - https://www.youtube.com/watch?v=kIhBe27LLNM
 - CERN training:
   - Talk used, thanks to [Branka Zei Pollermann](http://www.vox-institute.ch)
