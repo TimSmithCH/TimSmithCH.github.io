@@ -119,7 +119,8 @@ function makeChart (data, markers) {
                 .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10)
                 .tickFormat(d3.time.format('%M:%S'));
 
-  var svg = d3.select('body').append('svg')
+  //var svg = d3.select('body').append('svg')
+  var svg = d3.select("#svgHere").append('svg')
     .attr('width',  svgWidth)
     .attr('height', svgHeight)
     .append('g')
