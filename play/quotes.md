@@ -25,3 +25,5 @@
 - (You cannot solve a problem from the same consciousness that created it. You must learn to see the world anew.)
 - Art is how we decorate space; Music is how we decorate time  Alex Clay Hutchings
 - I would rather have questions that cant be answered than answers that cant be questioned - Richard Feynman
+- Those who cannot remember the past are condemned to repeat it - George Santayana
+- I do not feel obliged to believe that that same God who has endowed us with senses, reason, and intellect has intended to forgo their use - Galileo Galilei
