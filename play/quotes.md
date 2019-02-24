@@ -1,5 +1,5 @@
 | Inspiration | By |
----
+| ----------- | -- |
 | Don't dream your life | live your dream	 Anon |
 | Climb if you will, but remember that strength and courage are nothing without prudence |	Edward Whymper |
 | Who asks, is stupid in that minute, but who doesn't, will remain dumb forever |	Anon |
