@@ -1,57 +1,100 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
+    <title>Tim Smith's Commuting</title>
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tim Smith</title>
-    <meta name="description" content="A home page for Tim">
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <!-- Newer versions, but need to get working with v10 api
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Javascript -->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-    -->
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-    <!-- External libraries -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!-- Site styles -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css"/>
+    <style>
+.jumbotron-image {
+  background-image: url("/assets/WeissMattHer.jpg");
+  background-size: cover;
+  color: #fff;
+  margin-bottom:0;
+}
+.jumbotron-squeeze {
+  margin-bottom:0;
+  padding: 32px 32px;
+}
+.bg-sb { 
+  background-color: #BFD4EF; /* Sky Blue */
+  color: #ffffff;
+}
+.bg-wh { 
+  background-color: #ffffff; /* White */
+  color: #555555;
+}
+    </style>
   </head>
 
   <body>
-    <header class="navigation" role="banner">
-      <div class="navigation-wrapper">
-        <a href="/" class="logo">
-          <img src="/assets/logo.png" alt="Tim">
-        </a>
-        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-          <i class="fa fa-bars"></i>
-        </a>
-        <nav role="navigation">
-          <ul id="js-navigation-menu" class="navigation-menu show">
-            <li class="nav-link"><a href="/work/">Work</a>
-            <li class="nav-link"><a href="/commute/">Commute</a>
-            <li class="nav-link"><a href="/play/">Play</a>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
-    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
-    <style>
-      #menu {
-        background: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        left: 10px;
-        border-radius: 3px;
-        width: 100px;
-        border: 1px solid rgba(0,0,0,0.4);
-        font-family: 'Open Sans', sans-serif;
-      }
+    <div class="jumbotron jumbotron-image text-center">
+      <h1>Tim Smith</h1>
+      <h4><em>Physicist / Computer Scientist / Mountaineer</em></h4>
+    </div>
+
+    <nav class="navbar navbar-expand-sm sticky-top bg-sb navbar-light">
+      <a class="navbar-brand" href="#"><img src="/assets/logo.png" width="30" height="30" alt="Tim"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#Bio">Bio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#Responsibilities">Responsibilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#Outreach">Outreach</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#Contact">Contact</a>
+          </li>    
+          <li class="nav-item active">
+            <a class="nav-link btn btn-outline-success" href="publications.html">Publications</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-warning" href="commute/index.html">Commuting</a>
+          </li>
+        </ul>
+      </div>  
+    </nav>
+
+    <div class="container bg-1 py-3 text-center" id="Title">
+      <h3>Commuting Routes</h3>
+    </div>
+
+    <div class="container bg-1 py-3" id="MapBox">
+
+      <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+      <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+      <style>
+#menu {
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 3px;
+  width: 100px;
+  border: 1px solid rgba(0,0,0,0.4);
+  font-family: 'Open Sans', sans-serif;
+}
 
       #menu a {
         font-size: 13px;
@@ -81,259 +124,299 @@
       #menu a.active:hover {
         background: #3074a4;
       }
-    </style>
+      </style>
 
-    <div class="page-content">
-      <div class="home">
-        <div class="wrapper">
-          <h1>Commuting Routes</h1>
-          <div id='map' style='width: 864px; height: 550px;'>
-            <nav id="menu"></nav>
+      <div id='map' class="mapboxgl-map" style='width: 100%; height: 550px;'>
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+  //style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+  center: [6.118484, 46.283021], // starting position
+  zoom: 11 // starting zoom
+});
+
+// Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl());
+// Add a scale
+map.addControl(new mapboxgl.ScaleControl());
+
+map.on('load', function () {
+  // The direct route, as the crow flies
+  map.addSource("crow", {
+    "type": "geojson",
+    "data": "http://timsmithch.github.io/commute/commute_crow.geojson"
+  });
+  map.addLayer({
+    "id": "crow",
+    "type": "line",
+    "source": "crow",
+    "layout": {
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      "line-color": "yellow",
+      "line-width": 4
+    }
+  });
+
+  // The route options
+  map.addSource("routes", {
+    "type": "geojson",
+    "data": "http://timsmithch.github.io/commute/commute_routes.geojson"
+  });
+  map.addLayer({
+    "id": "routes",
+    "type": "line",
+    "source": "routes",
+    "layout": {
+      "visibility": "visible",
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      "line-color": "red",
+      "line-width": 4
+    }
+  });
+
+  // The POIs: border markers
+  map.addSource("border", {
+    "type": "geojson",
+    "data": "http://timsmithch.github.io/commute/commute_border.geojson"
+  });
+  map.addLayer({
+    "id": "border",
+    "type": "symbol",
+    "source": "border",
+    "layout": {
+      "visibility": "visible",
+      "icon-image": "{marker-symbol}-15",
+      "text-field": "GE-{title}",
+      "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+      "text-size": 12,
+      "text-offset": [0, 0.8],
+      "text-anchor": "top"
+    },
+    "paint": {
+      "text-color": "#877b59"
+      //"icon-color": "#FF0000"
+    }
+  });
+
+  // The pre-1963 border
+  map.addSource("oldborder", {
+    "type": "geojson",
+    "data": "http://timsmithch.github.io/commute/commute_border_old.geojson"
+  });
+  map.addLayer({
+    "id": "oldborder",
+    "type": "line",
+    "source": "oldborder",
+    "layout": {
+      "visibility": "visible",
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      "line-color": "#6495ED",
+      "line-width": 2
+    }
+  });
+
+  // And some height information
+  map.addSource('contours', {
+    "type": "vector",
+    "url": "mapbox://mapbox.mapbox-terrain-v2"
+  });
+  map.addLayer({
+    'id': 'contours',
+    'type': 'line',
+    'source': 'contours',
+    'source-layer': 'contour',
+    'layout': {
+      'visibility': 'visible',
+      'line-join': 'round',
+      'line-cap': 'round'
+    },
+    'paint': {
+      'line-color': '#877b59',
+      'line-width': 1
+    }
+  });
+});
+toggleLayer("Routes", "routes");
+toggleLayer("Border Stones", "border");
+toggleLayer("Old Border", "oldborder");
+
+function toggleLayer(name, id) {
+  var link = document.createElement('a');
+  link.href = '#';
+  link.className = 'active';
+  link.textContent = name;
+  link.onclick = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var visibility = map.getLayoutProperty(id, 'visibility');
+    if (visibility === 'visible') {
+      map.setLayoutProperty(id, 'visibility', 'none');
+      this.className = '';
+    } else {
+      this.className = 'active';
+      map.setLayoutProperty(id, 'visibility', 'visible');
+    }
+  };
+  var layers = document.getElementById('menu');
+  layers.appendChild(link);
+}
+      </script>
+    </div>
+
+    <div class="bg-sb">
+      <div class="container bg-sb p-3 text-center" id="yearbike2work">
+        <h3>CERN's cycle to work challenges:</h3>
+        <div class="card bg-sb">
+          <div class="card-body">
+            <p class="card-text">2019: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">1305 km</a></p>
+            <p class="card-text">2018: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">6900 km</a></p>
+            <p class="card-text">2017: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">6980 km</a></p>
+            <p class="card-text">2016: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">7170 km</a></p>
+            <p class="card-text">2015: <a href="http://www.endomondo.com/challenges/19490660">6518 km</a></p>
+            <p class="card-text">2014: <a href="http://www.endomondo.com/challenges/13560565">7777 km</a></p>
+            <p class="card-text">2013: <a href="http://www.endomondo.com/challenges/7839049">7182 km</a></p>
+            <p class="card-text">2012: <a href="http://www.endomondo.com/challenges/3626399">7233 km</a></p>
           </div>
-
-          <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
-            var map = new mapboxgl.Map({
-              container: 'map', // container id
-              style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-              //style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
-              center: [6.118484, 46.283021], // starting position
-              zoom: 11 // starting zoom
-            });
-            
-            // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.NavigationControl());
-            // Add a scale
-            map.addControl(new mapboxgl.ScaleControl());
-            
-            map.on('load', function () {
-              // The direct route, as the crow flies
-              map.addSource("crow", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_crow.geojson"
-              });
-              map.addLayer({
-                "id": "crow",
-                "type": "line",
-                "source": "crow",
-                "layout": {
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "yellow",
-                  "line-width": 4
-                }
-              });
-              
-              // The route options
-              map.addSource("routes", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_routes.geojson"
-              });
-              map.addLayer({
-                "id": "routes",
-                "type": "line",
-                "source": "routes",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "red",
-                  "line-width": 4
-                }
-              });
-              
-              // The POIs: border markers
-              map.addSource("border", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_border.geojson"
-              });
-              map.addLayer({
-                "id": "border",
-                "type": "symbol",
-                "source": "border",
-                "layout": {
-                  "visibility": "visible",
-                  "icon-image": "{marker-symbol}-15",
-                  "text-field": "GE-{title}",
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-size": 12,
-                  "text-offset": [0, 0.8],
-                  "text-anchor": "top"
-                },
-                "paint": {
-                  "text-color": "#877b59"
-                  //"icon-color": "#FF0000"
-                }
-              });
-              
-              // The pre-1963 border
-              map.addSource("oldborder", {
-                "type": "geojson",
-                "data": "http://timsmithch.github.io/commute/commute_border_old.geojson"
-              });
-              map.addLayer({
-                "id": "oldborder",
-                "type": "line",
-                "source": "oldborder",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "#6495ED",
-                  "line-width": 2
-                }
-              });
-              
-              // And some height information
-              map.addSource('contours', {
-                "type": "vector",
-                "url": "mapbox://mapbox.mapbox-terrain-v2"
-              });
-              map.addLayer({
-               'id': 'contours',
-               'type': 'line',
-               'source': 'contours',
-               'source-layer': 'contour',
-               'layout': {
-                 'visibility': 'visible',
-                 'line-join': 'round',
-                 'line-cap': 'round'
-                },
-                'paint': {
-                  'line-color': '#877b59',
-                  'line-width': 1
-                }
-              });
-            });
-            toggleLayer("Routes", "routes");
-            toggleLayer("Border Stones", "border");
-            toggleLayer("Old Border", "oldborder");
-
-            function toggleLayer(name, id) {
-              var link = document.createElement('a');
-              link.href = '#';
-              link.className = 'active';
-              link.textContent = name;
-              link.onclick = function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                var visibility = map.getLayoutProperty(id, 'visibility');
-                if (visibility === 'visible') {
-                  map.setLayoutProperty(id, 'visibility', 'none');
-                  this.className = '';
-                } else {
-                  this.className = 'active';
-                  map.setLayoutProperty(id, 'visibility', 'visible');
-                }
-              };
-              var layers = document.getElementById('menu');
-              layers.appendChild(link);
-            }
-          </script>
-          <p></p>
-          <h2>CERN's cycle to work challenges:</h2>
-         	<ul class="plain">
-            <li>Social: <a href="https://social.cern.ch/community/BikeCommuters/SitePages/Community%20Home.aspx">2017 and 2016</a></li>
-            <li>Endomondo: <a href="http://www.endomondo.com/challenges/19490660">2015</a>, 
-              <a href="http://www.endomondo.com/challenges/13560565">2014</a>, 
-              <a href="http://www.endomondo.com/challenges/7839049">2013</a>, 
-              <a href="http://www.endomondo.com/challenges/3626399">2012</a>
-            </li>
-          </ul>
-
-          <h2>Swiss Bike to Work:</h2>
-          <a href="https://www.biketowork.ch/fr/">The challenge...</a>
-          <table>
-            <tr>
-              <td>
-                <a href="http://cds.cern.ch/record/2026888/">
-                <img src="http://cds.cern.ch/record/2026888/files/MAX_6869.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
-                <a href="http://home.cern">2015  Credit: CERN</a>
-              </td>
-              <td>
-                <a href="http://cds.cern.ch/record/1710372/">
-                <img src="http://cds.cern.ch/record/1710372/files/DSC_6289.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
-                <a href="http://home.cern">2014  Credit: CERN</a>
-              </td>
-              <td>
-                <a href="http://cds.cern.ch/record/1558424">
-                <img src="https://mediastream.cern.ch/MediaArchive/Photo/Public/2013/1306169/1306169_11/1306169_11-A5-at-72-dpi.jpg" alt="Pho" height="141" width="213"></a>
-                <a href="http://home.cern">2013  Credit: CERN</a>
-              </td>
-            </tr>
-          </table>
-
-          <h2>In the press:</h2>
-          <table>
-            <tr>
-              <td>
-                <a href="/assets/SunTimesMag.pdf"><img src="/assets/SundayTimes.jpg" alt="Magazine" height="300" width="223"></a>
-                <a href="http://www.thetimes.co.uk">  Credit: The Sunday Times</a>
-              </td>
-              <td>
-                <a href="/assets/Cycling_Active_Article.jpg"><img src="/assets/Cycling-Active.jpg" alt="Magazine" height="300" width="223"></a>
-                <a href="http://www.cyclingweekly.co.uk/publication/cycling-active">  Credit: Cycling Active</a>
-              </td>
-              <td>
-                <a href="/assets/rp_zoom_11.jpg"><img src="/assets/rp_01.jpg" alt="Magazine" height="300" width="223"></a>
-                <a href="http://myrepublica.com">  Credit: Republica</a>
-              </td>
-            </tr>
-          </table>
         </div>
       </div>
     </div>
 
-    <footer class="site-footer">
-      <div class="wrapper">
-        <h3 class="footer-heading">Tim</h3>
-        <div class="site-navigation">
-          <p><strong>Site Map</strong></p>
-          <ul class="pages">
-            <li class="nav-link"><a href="/work/">Work</a>
-            <li class="nav-link"><a href="/comms/">Comms</a>
-            <li class="nav-link"><a href="/play/">Play</a>
-          </ul>
+    <div class="container bg-1 p-3 text-center" id="bike2work">
+      <h3>Swiss Bike to Work:</h3>
+      <a href="https://www.biketowork.ch/fr/">The challenge...</a>
+      <div class="card-deck my-3">
+        <div class="card bg-wh">
+          <div class="card-header">
+            2018
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/2624378/">
+              <img src="http://cds.cern.ch/record/2624378/files/20180615_122700(0).jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
         </div>
-        <div class="site-contact">
-          <p><strong>Contact</strong>
-          <ul class="social-media-list">
-            <li>
-              <a href="mailto:tim.smith@cern.ch">
-                <i class="fa fa-envelope-o"></i>
-                <span class="username">tim.smith@cern.ch</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/TimSmithCH" title="Follow me on Twitter">
-                <i class="fa fa-twitter"></i>
-                <span class="username">@TimSmithCH</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/TimSmithCH" title="Fork me on GitHub">
-                <i class="fa fa-github"></i>
-                <span class="username">TimSmithCH</span>
-              </a>
-            </li>
-            <li>
-            <a href="https://ch.linkedin.com/pub/tim-smith/33/b74/751" title="Connect with me on LinkedIn">
-              <i class="fa fa-linkedin"></i>
-              <span class="username">Tim Smith</span>
-            </a>
-            </li>
-          </ul>
+        <div class="card bg-wh">
+          <div class="card-header">
+            2017
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/2270221/">
+              <img src="http://cds.cern.ch/record/2270221/files/_DSC3704.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
         </div>
-        <div class="site-signature">
-          <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+        <div class="card bg-wh">
+          <div class="card-header">
+            2016
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/2195231">
+              <img src="https://cds.cern.ch/record/2195231/files/MAX_2498.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
         </div>
       </div>
-    </footer>
+      <div class="card-deck my-3">
+        <div class="card bg-wh">
+          <div class="card-header">
+            2015
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/2026888/">
+              <img src="http://cds.cern.ch/record/2026888/files/MAX_6869.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
+        </div>
+        <div class="card bg-wh">
+          <div class="card-header">
+            2014
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/1710372/">
+              <img src="http://cds.cern.ch/record/1710372/files/DSC_6289.jpg?subformat=icon-640" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
+        </div>
+        <div class="card bg-wh">
+          <div class="card-header">
+            2013
+          </div>
+          <div class="card-body">
+            <a href="http://cds.cern.ch/record/1558424">
+              <img src="https://mediastream.cern.ch/MediaArchive/Photo/Public/2013/1306169/1306169_11/1306169_11-A5-at-72-dpi.jpg" alt="Pho" height="141" width="213"></a>
+          </div>
+          <div class="card-footer">
+            <a href="http://home.cern">Credit: CERN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="bg-sb">
+      <div class="container bg-sb p-3 text-center" id="press">
+        <h3>In the press:</h3>
+        <div class="card-deck">
+          <div class="card bg-wh">
+            <div class="card-body">
+              <a href="/assets/SunTimesMag.pdf"><img src="/assets/SundayTimes.jpg" alt="Magazine" height="300" width="223"></a>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.thetimes.co.uk">  Credit: The Sunday Times</a>
+            </div>
+          </div>
+          <div class="card bg-wh">
+            <div class="card-body">
+              <a href="/assets/Cycling_Active_Article.jpg"><img src="/assets/Cycling-Active.jpg" alt="Magazine" height="300" width="223"></a>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.cyclingweekly.co.uk/publication/cycling-active">  Credit: Cycling Active</a>
+            </div>
+          </div>
+          <div class="card bg-wh">
+            <div class="card-body">
+              <a href="/assets/rp_zoom_11.jpg"><img src="/assets/rp_01.jpg" alt="Magazine" height="300" width="223"></a>
+            </div>
+            <div class="card-footer">
+              <a href="http://myrepublica.com">  Credit: Republica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-squeeze bg-sb text-center" id="Contact">
+      <a class="btn" href="https://orcid.org/0000-0002-1567-7116"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"> Orcid</a>
+      <a class="btn" href="https://github.com/TimSmithCH"><i class="fa fa-github"></i> GitHub</a>
+      <a class="btn" href="https://twitter.com/TimSmithCH"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="btn" href="https://www.linkedin.com/in/tim0smith/"><i class="fa fa-linkedin"></i> LinkedIn</a>
+      <a class="btn" href="mailto:tim.smith@cern.ch"><i class="fa fa-envelope"></i> Email</a>
+      <p><i class="fa fa-copyright"></i>Tim Smith  <i class="fa fa-creative-commons"></i>-by-4.0</p>
+    </div>
+
   </body>
 </html>
