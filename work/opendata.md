@@ -3,10 +3,10 @@ Publications:
 2019
 ===
 Search for Non-Standard Sources of Parity Violation in Jets at s√=8 TeV with CMS Open Data
-https://arxiv.org/abs/1904.11195
+- https://arxiv.org/abs/1904.11195
 
 End-to-End Jet Classification of Quarks and Gluons with the CMS Open Data
-https://arxiv.org/abs/1902.08276
+- https://arxiv.org/abs/1902.08276
 
 2018
 ===
