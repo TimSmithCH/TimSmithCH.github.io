@@ -25,3 +25,6 @@ Jet Substructure Studies with CMS Open Data
 Exposing the QCD Splitting Function with CMS Open Data
 - https://arxiv.org/abs/1704.05066
 - https://doi.org/10.1103/PhysRevLett.119.132003
+
+arXiv query:
+https://arxiv.org/search/?query=%22CMS+Open+Data%22&searchtype=all&abstracts=show&order=-announced_date_first&size=50
