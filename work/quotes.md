@@ -11,4 +11,4 @@ entrusted with a noble mission which it must fulfil not just for tomorrow
 but for the eternal history of human thought.
 
 - 1953 CERN Convention:
-  - the results of its experimental and theoretical work shall be ... made generally available
+  - The Organization shall provide for collaboration among European States in nuclear research of a pure scientific aid fundamental character, and in research essentially related thereto, The Organization shall have no concern with work for military requirements and the results of its experimental and theoretical work shall be published or otherwise made generally available.
