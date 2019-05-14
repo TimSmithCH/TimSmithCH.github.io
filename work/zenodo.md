@@ -50,6 +50,8 @@
 - SciPy: https://zenodo.org/record/1241501
 - MatPlotLib: https://zenodo.org/record/1202077 https://matplotlib.org/citing.html
 - Seaborn: https://zenodo.org/record/1313201
+- LIGO gravitational wave analysis: https://zenodo.org/record/2801307
+- EHT black hole picture analysis: https://zenodo.org/record/2614016
 
 ---
 ## Zenodo Clones
