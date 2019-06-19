@@ -57,3 +57,5 @@
 ## Zenodo Clones
 - Rodare: https://rodare.hzdr.de
 - Indigo-DataCloud OD service launcher: https://www.indigo-datacloud.eu/deploy-open-data-repository-cloud-using-marathon
+- INFN: https://www.openaccessrepository.it/
+
