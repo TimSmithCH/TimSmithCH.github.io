@@ -35,6 +35,7 @@
 - RIO Journal: https://riojournal.com in zenodo: 
 - ROpenSci: https://zenodo.org/search?page=1&size=20&q=ropensci
 - Open Grants: https://www.ogrants.org (published in RIOJournal, archived in Zenodo)
+- Open Context: https://opencontext.org in zenodo: https://zenodo.org/communities/opencontext/
 
 ---
 ## Interesting datasets/records in Zenodo:
