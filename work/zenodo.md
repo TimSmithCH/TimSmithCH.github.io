@@ -29,6 +29,7 @@
 - https://andrewgyork.github.io/publication_template/
 - http://boutiques.github.io 
 - https://www.r-bloggers.com/querying-zenodo-org-repository-with-r/
+- https://github.com/eblondel/zen4R/wiki
 
 ## Archived in Zenodo:
 - GitHub: 
