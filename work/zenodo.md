@@ -50,6 +50,8 @@
 - Plan S reposnses: https://zenodo.org/record/3254637
   - EudroDoc comments on implentation: http://eurodoc.net/implementation-plan-s.pdf
 - SoftwareHeritage graph: https://zenodo.org/record/2583978
+- Gene Ontology Archive: https://zenodo.org/record/3267438
+  - http://geneontology.org/docs/downloads/
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
