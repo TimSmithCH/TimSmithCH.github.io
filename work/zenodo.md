@@ -50,8 +50,17 @@
 - Plan S reposnses: https://zenodo.org/record/3254637
   - EudroDoc comments on implentation: http://eurodoc.net/implementation-plan-s.pdf
 - SoftwareHeritage graph: https://zenodo.org/record/2583978
+- Microsoft Academic Graph: https://zenodo.org/record/2628216
+- OpenAIRE linked open data dump: https://zenodo.org/record/2352439
 - Gene Ontology Archive: https://zenodo.org/record/3267438
   - http://geneontology.org/docs/downloads/
+- Global daily satellite rainfall: https://zenodo.org/record/2591215
+- Biomedical relationships: https://zenodo.org/record/3346007
+- ALexandria Library, quantum-chemical DB: https://zenodo.org/record/1170597
+  - https://www.nature.com/articles/sdata201862
+- Global River Widths from Landsat: https://zenodo.org/record/1297434
+- European Electrical system: https://zenodo.org/record/999150
+- Stack Overflow Torrent DB: https://zenodo.org/record/3255045
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
