@@ -63,6 +63,7 @@
 - Stack Overflow Torrent DB: https://zenodo.org/record/3255045
 - CMS Open Data analysis notebook: https://zenodo.org/record/3340205
 - First DOI registered taxonomic treatment: https://zenodo.org/record/3472000
+- Reliance on Science: https://zenodo.org/record/3382982
 
 ## Interesting software in Zenodo:
 - SciPy: https://zenodo.org/record/1241501
