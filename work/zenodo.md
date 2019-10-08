@@ -62,6 +62,7 @@
 - European Electrical system: https://zenodo.org/record/999150
 - Stack Overflow Torrent DB: https://zenodo.org/record/3255045
 - CMS Open Data analysis notebook: https://zenodo.org/record/3340205
+  - https://arxiv.org/pdf/1908.08542.pdf
 - First DOI registered taxonomic treatment: https://zenodo.org/record/3472000
 - Reliance on Science: https://zenodo.org/record/3382982
 
