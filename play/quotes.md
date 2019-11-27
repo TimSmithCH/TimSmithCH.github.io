@@ -30,3 +30,4 @@
 | I do not feel obliged to believe that that same God who has endowed us with senses, reason, and intellect has intended to forgo their use | Galileo Galilei |
 | We must accept finite disappointment, but we must never lose infinite hope | Martin Luther King, Jr |
 | People who say it cannot be done, should not interrupt those who are doing it | George Bernard Shaw |
+| Only the mediocre are always at their best | Jean Giraudou |
