@@ -32,7 +32,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
 
 function addYear(domain) {
   domain = domain.slice(); // Removing reference to called array (= creates new reference, domain.slice() does a shallow copy)
-  var result = new Date(date);
+  var result = new Date(domain[1]);
   result.setDate(result.getDate() + 365);
   domain[1] = result;
   return domain;
