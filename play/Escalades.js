@@ -30,6 +30,14 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .text('Time (m:s)');
 }
 
+function addYear(domain) {
+  domain = domain.slice(); // Removing reference to called array (= creates new reference, domain.slice() does a shallow copy)
+  var result = new Date(date);
+  result.setDate(result.getDate() + 365);
+  domain[1] = result;
+  return domain;
+}
+
 function drawPaths (svg, data, x, y) {
   var medianLine = d3.svg.line()
     .interpolate('cardinal')
@@ -109,7 +117,7 @@ function makeChart (data, markers) {
       chartHeight = svgHeight - margin.top  - margin.bottom;
 
   var x = d3.time.scale().range([0, chartWidth])
-            .domain(d3.extent(data, function (d) { return d.date; })).nice(),
+            .domain(d3.extent(addYear(data, function (d) { return d.date; }))).nice(),
       y = d3.time.scale().range([chartHeight, 0])
             .domain(d3.extent(data, function (d) { return d.time; })).nice();
 
