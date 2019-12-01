@@ -117,7 +117,7 @@ function makeChart (data, markers) {
       chartHeight = svgHeight - margin.top  - margin.bottom;
 
   var x = d3.time.scale().range([0, chartWidth])
-            .domain(d3.extent(addYear(data, function (d) { return d.date; }))).nice(),
+            .domain(d3.extent(data, function (d) { return d.date; })).nice(),
       y = d3.time.scale().range([chartHeight, 0])
             .domain(d3.extent(data, function (d) { return d.time; })).nice();
 
