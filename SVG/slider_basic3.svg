@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100vw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
+
+  <style>
+    .stdText {font-family: Helvetica; dominant-baseline: middle; text-anchor: middle}
+    :focus { outline: none; }
+  </style>
+
+  <script type="text/JavaScript">
+    <![CDATA[
+      //
+      // Trigger SVG animations on keypresses, and give focus to the
+      // slide which the animation brings on
+      //
+      function pressed() {
+        var keyPr = event.code;
+        var slideID = event.target.getAttributeNS(null,"id");
+        var myRegex = /^S(\d+)R/;
+        var slideNum = myRegex.exec(slideID)[1];
+        if (slideNum) {
+          switch (keyPr) {
+            case "ArrowLeft":
+            case "ArrowUp":
+              var svgAnim = "S"+slideNum+"off";
+              slideNum--;   // Go back to LAST slide
+              var focusSlide = "S"+slideNum+"R";
+              break;
+            case "ArrowRight":
+            case "ArrowDown":
+              slideNum++;   // Bring on NEXT slide
+              var svgAnim = "S"+slideNum+"on";
+              var focusSlide = "S"+slideNum+"R";
+              break;
+            default:
+              break;
+          }
+          var animation = document.getElementById(svgAnim);
+          if(animation) {
+            animation.beginElement();
+            var focusOn = document.getElementById(focusSlide);
+            if(focusOn) {
+              focusOn.focus();
+            }
+          }
+        }
+      }
+      //
+      // Intercept mouse clicks which trigger the SVG animations in order to:
+      // - stop them grabbing focus
+      // - give focus to the slide which the animation brings on
+      //
+      function clicked() {
+        var slideID = event.target.getAttributeNS(null,"id");
+        var myRegex = /^S(\d+)([L|R])/;
+        var match = myRegex.exec(slideID);
+        var slideNum = match[1];
+        var direction = match[2];
+        if (slideNum) {
+          switch (direction) {
+            case "L":
+              slideNum--;   // Focus on LAST slide
+              var focusSlide = "S"+slideNum+"R";
+              break;
+            case "R":
+              slideNum++;   // Focus on NEXT slide
+              var focusSlide = "S"+slideNum+"R";
+              break;
+            default:
+              break;
+          }
+          var focusOn = document.getElementById(focusSlide);
+          if(focusOn) {
+            focusOn.focus();
+          }
+        }
+        event.preventDefault();   // Stop the click from grabbing the focus
+      }
+      //
+      // Enter fullscreen mode when the icon is clicked
+      //
+      function openFullscreen(evt) {
+        var elem = window.frameElement;   // Set if embedded in an object on an HTML page
+        if (!elem) {
+          elem = document.documentElement;
+        }
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+        // If no slide is active, nothing was clicked yet so still on first screen
+        var activeElem = document.activeElement;
+        if (!activeElem) {
+          var focusOn = document.getElementById("S1R");
+          if(focusOn) {
+            focusOn.focus();
+          }
+        }
+        // The SVG animation fails to trigger on Chrome(both) and Firefox(embedded),
+        // so need to force it
+        var animation = document.getElementById("FULLoff");
+        if(animation) {
+          animation.beginElement();
+        }
+        evt.preventDefault();   // Stop the click from grabbing the focus
+      }
+    ]]>
+  </script>
+
+  <svg id="slide1" x="0" y="0" width="1600" height="900" >
+    <rect x="0" y="0" width="100%" height="100%" fill="crimson" />
+    <text class="stdText" fill="white" font-size="192" x="50%" y="50%">Title</text>
+    <rect id="S1L" width="50%" height="100%" fill-opacity="0" onmousedown="clicked()" />
+  </svg>
+
+  <svg id="slide2" x="1600" y="0" width="1600" height="900" >
+    <rect x="0" y="0" width="100%" height="100%" fill="darkorange" />
+    <text class="stdText" fill="white" font-size="96" x="50%" y="50%">Slide 1</text>
+    <rect id="S2L" width="50%" height="100%" fill-opacity="0" onmousedown="clicked()" />
+  </svg>
+
+  <svg id="slide3" x="1600" y="0" width="1600" height="900" >
+    <rect x="0" y="0" width="100%" height="100%" fill="limegreen" />
+    <text class="stdText" fill="white" font-size="96" x="50%" y="50%">Slide 2</text>
+    <rect id="S3L" width="50%" height="100%" fill-opacity="0" onmousedown="clicked()" />
+  </svg>
+
+  <svg id="slide4" x="1600" y="0" width="1600" height="900" >
+    <rect x="0" y="0" width="100%" height="100%" fill="deepskyblue" />
+    <text class="stdText" fill="white" font-size="96" x="50%" y="50%">Slide 3</text>
+    <rect id="S4L" width="50%" height="100%" fill-opacity="0" onmousedown="clicked()" />
+  </svg>
+
+  <svg id="slide5" x="1600" y="0" width="1600" height="900" >
+    <rect x="0" y="0" width="100%" height="100%" fill="darkorchid" />
+    <text class="stdText" fill="white" font-size="192" x="50%" y="50%">Credits</text>
+    <rect id="S5L" width="50%" height="100%" fill-opacity="0" onmousedown="clicked()" />
+  </svg>
+
+  <!-- Instantiate invisible right hand halfs to for all slides to accept clicks -->
+  <rect id="S1R" x="800" y="0" width="800" height="900" fill-opacity="0" onmousedown="clicked()" onkeydown="pressed()" tabindex="0" />
+  <rect id="S2R" x="2400" y="0" width="800" height="900" fill-opacity="0" onmousedown="clicked()" onkeydown="pressed()" tabindex="0"/>
+  <rect id="S3R" x="2400" y="0" width="800" height="900" fill-opacity="0" onmousedown="clicked()" onkeydown="pressed()" tabindex="0"/>
+  <rect id="S4R" x="2400" y="0" width="800" height="900" fill-opacity="0" onmousedown="clicked()" onkeydown="pressed()" tabindex="0"/>
+  <rect id="S5R" x="2400" y="0" width="800" height="900" fill-opacity="0" onmousedown="clicked()" onkeydown="pressed()" tabindex="0"/>
+
+
+  <!-- Instantiate the fullscreen icon, and animations to take it off and bring it back on -->
+  <rect id="FullScreen" x="1400" y="800" width="200" height="100" fill="yellow" onmousedown="openFullscreen(evt)" />
+  <animate xlink:href="#FullScreen" id="FULLoff" attributeName="x" to="1600" dur="0.1s" fill="freeze" begin="click" />
+  <animate xlink:href="#FullScreen" id="FULLon" attributeName="x" to="1400" dur="0.1s" fill="freeze" begin="click" />
+
+  <!-- Animations to bring slide 2 on (clicked slide 1 RH) and take slide 2 off (clicked slide 2 RH) -->
+  <animate xlink:href="#S1R" id="S2on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#slide2" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S2on.begin" />
+  <animate xlink:href="#S2R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S2on.begin" />
+  <animate xlink:href="#slide2" id="S2off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#S2R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S2off.begin" />
+
+  <!-- Animations to bring slide 3 on (clicked slide 2 RH) and take slide 3 off (clicked slide 3 RH) -->
+  <animate xlink:href="#S2R" id="S3on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#slide3" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S3on.begin" />
+  <animate xlink:href="#S3R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S3on.begin" />
+  <animate xlink:href="#slide3" id="S3off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#S3R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S3off.begin" />
+
+  <!-- Animations to bring slide 4 on (clicked slide 3 RH) and take slide 4 off (clicked slide 4 RH) -->
+  <animate xlink:href="#S3R" id="S4on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#slide4" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S4on.begin" />
+  <animate xlink:href="#S4R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S4on.begin" />
+  <animate xlink:href="#slide4" id="S4off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#S4R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S4off.begin" />
+
+  <!-- Animations to bring slide 5 on (clicked slide 4 RH) and take slide 5 off (clicked slide 5 RH) -->
+  <animate xlink:href="#S4R" id="S5on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#slide5" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S5on.begin" />
+  <animate xlink:href="#S5R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S5on.begin" />
+  <animate xlink:href="#slide5" id="S5off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
+  <animate xlink:href="#S5R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S5off.begin" />
+</svg>

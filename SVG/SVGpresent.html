@@ -7,23 +7,132 @@
   width: 256px;
   height: 144px;
 }
+object {
+	width: 100%;
+	display: block;
+	height: auto;
+	position: relative;
+}
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+/* Style the header */
+.header {
+  background-color: lavender;
+  padding: 20px;
+  text-align: center;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: darkviolet;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+.column.side {
+  width: 20%;
+}
+.column.middle {
+  width: 60%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
 
-<h2>Testing the SVG presentation concept</h2>
+  <div class="header">
+  <h1>SVGPresent</h1>
+  <p>Re-imagining the presentation format: standalone, open, compact, scalable, display anywhere</p>
+</div>
 
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+  </div>
+
+  <div class="column middle">
+<h2>Implementation</h2>
+
+<h3>Concept</h3>
+Create a deck of slides off-screen (outside the ViewBox) and use native SVG animations
+to bring them on-screen. Ideally slide changes would be triggered by keypresses or mouse
+clicks. However in SVG1.1 (implemented in all browsers) not all such triggers work natively,
+so it is currently necessary to use a little javascript (embedded) to achieve the full
+functionality.
+
+<h3>Demonstration</h3>
 <p>A slide deck with no interactivity that cycles through by itself:</p>
-<img src="./slider_basic0.svg" alt="Basic slide deck" width="256px" height="144px">
+<div class=svgframe>
+<object type="image/svg+xml" data="./slider_basic0.svg" width="100%" height="100%"></object>
+</div>
+
+<h3>Basic Interactivity</h3>
+Universally (all browsers and OSes), support mouse clicks to trigger animations. So, using
+mouse clicks, implement forward and reverse capabilities by accepting clicks on the right
+half of the screen to advance, and the left half of the screen to go back through the
+slide deck.
 
 <p>A slide deck with interactivity that advances when clicked on right (back on left)</p>
 <div class=svgframe>
 <object type="image/svg+xml" data="./slider_basic1.svg" width="100%" height="100%"></object>
 </div>
 
+<h3>Full Screen</h3>
+In order to trigger the transition to fullscreen mode from within the SVG (since there are
+no SVG native commands) it is necessary to use some embedded javascript
+
 <p>A slide deck with interactivity that can go into full screen mode (click on icon)</p>
 <div class=svgframe>
 <object type="image/svg+xml" data="./slider_basic2.svg" width="100%" height="100%"></object>
+</div>
+
+<h3>Keyboard Interactivity</h3>
+SVG1.1 includes the the ideal keyboard interactivity to trigger animations using the
+begin="accessKey(a)" syntax. Unfortunately few browsers implemented support for this, and
+now it seems that all those that did originally have now depricated it.
+
+<p>Instead standard events have to be used that rely on javascript listeners. The keydown
+event is used, since the more obvious onkeypress does not fire for all keys in some
+browsers (excluding for example ALT, CTRL, SHIFT, ESC). Hence, use onkeydown instead
+as it fires universally for all keys.
+
+<p>In order to recieve keyboard events, the slides need to have the screen focus.
+Since SVG elements are not normally focusable, this also requires adding tabindex
+attributes and managing the focus through the javascript
+
+<p>A slide deck with mouse and keyboard interactivity that can go into full screen mode</p>
+<div class=svgframe>
+<object type="image/svg+xml" data="./slider_basic3.svg" width="100%" height="100%"></object>
+</div>
+
+  </div>
+  <div class="column side">
+  </div>
 </div>
 
 </body>

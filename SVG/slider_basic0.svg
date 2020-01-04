@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="256" height="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
+<svg width="100vw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
 
   <style>
     .stdText {font-family: Helvetica; dominant-baseline: middle; text-anchor: middle}
@@ -32,33 +32,15 @@
     <text class="stdText" fill="white" font-size="192" x="50%" y="50%">Credits</text>
   </svg>
 
-  <rect id="S1R" x="800" y="0" width="800" height="900" fill-opacity="0" />
-  <rect id="S2R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
-  <rect id="S3R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
-  <rect id="S4R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
-  <rect id="S5R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
+  <!-- Animate cycling through the deck -->
+  <animate xlink:href="#slide2" id="S2on" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="2s;S2off.begin+2s" />
+  <animate xlink:href="#slide3" id="S3on" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S2on.begin+2s" />
+  <animate xlink:href="#slide4" id="S4on" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S3on.begin+2s" />
+  <animate xlink:href="#slide5" id="S5on" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S4on.begin+2s" />
 
-  <animate xlink:href="#S1R" id="S2on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="2s" />
-  <animate xlink:href="#slide2" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S2on.begin" />
-  <animate xlink:href="#S2R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S2on.begin" />
-  <animate xlink:href="#slide2" id="S2off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
-  <animate xlink:href="#S2R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S2off.begin" />
-
-  <animate xlink:href="#S2R" id="S3on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S2on.begin+2s" />
-  <animate xlink:href="#slide3" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S3on.begin" />
-  <animate xlink:href="#S3R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S3on.begin" />
-  <animate xlink:href="#slide3" id="S3off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
-  <animate xlink:href="#S3R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S3off.begin" />
-
-  <animate xlink:href="#S3R" id="S4on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S3on.begin+2s" />
-  <animate xlink:href="#slide4" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S4on.begin" />
-  <animate xlink:href="#S4R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S4on.begin" />
-  <animate xlink:href="#slide4" id="S4off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
-  <animate xlink:href="#S4R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S4off.begin" />
-
-  <animate xlink:href="#S4R" id="S5on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S4on.begin+2s" />
-  <animate xlink:href="#slide5" attributeName="x" to="0" dur="0.3s" fill="freeze" begin="S5on.begin" />
-  <animate xlink:href="#S5R" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="S5on.begin" />
-  <animate xlink:href="#slide5" id="S5off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="click" />
-  <animate xlink:href="#S5R" attributeName="x" to="2400" dur="0.3s" fill="freeze" begin="S5off.begin" />
+  <!-- Rewind to start again -->
+  <animate xlink:href="#slide2" id="S2off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="S5on.begin+2.3" />
+  <animate xlink:href="#slide3" id="S3off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="S5on.begin+2.2" />
+  <animate xlink:href="#slide4" id="S4off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="S5on.begin+2.1" />
+  <animate xlink:href="#slide5" id="S5off" attributeName="x" to="1600" dur="0.3s" fill="freeze" begin="S5on.begin+2.0" />
 </svg>

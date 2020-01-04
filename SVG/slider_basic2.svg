@@ -7,6 +7,34 @@
     .stdText {font-family: Helvetica; dominant-baseline: middle; text-anchor: middle}
   </style>
 
+  <script type="text/JavaScript">
+    <![CDATA[
+      //
+      // Enter fullscreen mode when the icon is clicked
+      //
+      function openFullscreen(evt) {
+        var elem = window.frameElement;   // Set if embedded in an object on an HTML page
+        if (!elem) {
+          elem = document.documentElement;
+        }
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+        // Animate the icon off (as it fails to trigger on Chrome and Firefox),
+        var animation = document.getElementById("FULLoff");
+        if(animation) {
+          animation.beginElement();
+        }
+      }
+    ]]>
+  </script>
+
   <svg id="slide1" x="0" y="0" width="1600" height="900" >
     <rect x="0" y="0" width="100%" height="100%" fill="crimson" />
     <text class="stdText" fill="white" font-size="192" x="50%" y="50%">Title</text>
@@ -38,6 +66,11 @@
   <rect id="S3R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
   <rect id="S4R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
   <rect id="S5R" x="2400" y="0" width="800" height="900" fill-opacity="0" />
+
+  <!-- Instantiate the fullscreen icon, and animations to take it off and bring it back on -->
+  <rect id="FullScreen" x="1400" y="800" width="200" height="100" fill="yellow" onmousedown="openFullscreen(evt)" />
+  <animate xlink:href="#FullScreen" id="FULLoff" attributeName="x" to="1600" dur="0.1s" fill="freeze" begin="click" />
+  <animate xlink:href="#FullScreen" id="FULLon" attributeName="x" to="1400" dur="0.1s" fill="freeze" begin="click" />
 
   <!-- Animations to bring slide 2 on (clicked slide 1 RH) and take slide 2 off (clicked slide 2 RH) -->
   <animate xlink:href="#S1R" id="S2on" attributeName="x" to="800" dur="0.3s" fill="freeze" begin="click" />
