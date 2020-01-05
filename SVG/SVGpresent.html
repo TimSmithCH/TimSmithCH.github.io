@@ -34,6 +34,19 @@ body {
   overflow: hidden;
   background-color: darkviolet;
 }
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
@@ -66,9 +79,8 @@ body {
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+  <a href="https://github.com/TimSmithCH/SVGPresent">GitHub Repo</a>
+  <a href="https://www.w3.org/TR/SVG11/">SVG spec</a>
 </div>
 
 <div class="row">
@@ -88,7 +100,7 @@ functionality.
 <h3>Demonstration</h3>
 <p>A slide deck with no interactivity that cycles through by itself:</p>
 <div class=svgframe>
-<object type="image/svg+xml" data="./slider_basic0.svg" width="100%" height="100%"></object>
+<object type="image/svg+xml" data="decks/slider_basic0.svg" width="100%" height="100%"></object>
 </div>
 
 <h3>Basic Interactivity</h3>
@@ -99,7 +111,7 @@ slide deck.
 
 <p>A slide deck with interactivity that advances when clicked on right (back on left)</p>
 <div class=svgframe>
-<object type="image/svg+xml" data="./slider_basic1.svg" width="100%" height="100%"></object>
+<object type="image/svg+xml" data="decks/slider_basic1.svg" width="100%" height="100%"></object>
 </div>
 
 <h3>Full Screen</h3>
@@ -108,7 +120,7 @@ no SVG native commands) it is necessary to use some embedded javascript
 
 <p>A slide deck with interactivity that can go into full screen mode (click on icon)</p>
 <div class=svgframe>
-<object type="image/svg+xml" data="./slider_basic2.svg" width="100%" height="100%"></object>
+<object type="image/svg+xml" data="decks/slider_basic2.svg" width="100%" height="100%"></object>
 </div>
 
 <h3>Keyboard Interactivity</h3>
@@ -127,7 +139,7 @@ attributes and managing the focus through the javascript
 
 <p>A slide deck with mouse and keyboard interactivity that can go into full screen mode</p>
 <div class=svgframe>
-<object type="image/svg+xml" data="./slider_basic3.svg" width="100%" height="100%"></object>
+<object type="image/svg+xml" data="decks/slider_basic3.svg" width="100%" height="100%"></object>
 </div>
 
   </div>
