@@ -17,12 +17,12 @@ SVG has many interesting features that make it an ideal presentation format:
 Unfortunately, GitHub sanitizes embedded content for security reasons and so the slide decks cant be included directly
 here. Instead they have to be displayed from a remote server:
 
-![Slide deck 0](https://timsmithch.github.io/SVG/slider_basic0.svg "Most basic slide deck")
+![Slide deck 0](https://timsmithch.github.io/SVG/decks/slider_basic0.svg "Most basic slide deck")
 
 Clicking on the right half of slide advances to the next slide
 Clikcing on the left half of slide returns to previous slide
 
-<img src="https://timsmithch.github.io/SVG/slider_basic1.svg">
+<img src="https://timsmithch.github.io/SVG/decks/slider_basic1.svg">
 
-The full introduction and demonstration can be seen here instead:
-[](https://timsmithch.github.io/SVG/SVGpresent.html/)
+The full introduction and demonstration can be seen here instead in my
+[GitHub pages](https://timsmithch.github.io/SVG/SVGpresent.html/)
