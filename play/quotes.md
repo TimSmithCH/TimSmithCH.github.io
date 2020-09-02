@@ -31,3 +31,5 @@
 | We must accept finite disappointment, but we must never lose infinite hope | Martin Luther King, Jr |
 | People who say it cannot be done, should not interrupt those who are doing it | George Bernard Shaw |
 | Only the mediocre are always at their best | Jean Giraudou |
+
+[//]: # (Isn’t it wonderful what you can get done if you don’t have to get credit for it - translation of old persons’ dicha in Costa Rica)
