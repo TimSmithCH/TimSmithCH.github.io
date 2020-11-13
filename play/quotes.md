@@ -32,5 +32,5 @@
 | People who say it cannot be done, should not interrupt those who are doing it | George Bernard Shaw |
 | Only the mediocre are always at their best | Jean Giraudou |
 | Discovery consists of seeing what everyone has seen, but thinking what no one has thought.. | Albert Szent-Gyorgyi |
-
-[//]: # (Isn’t it wonderful what you can get done if you don’t have to get credit for it - translation of old persons’ dicha in Costa Rica)
+| The reward of one duty is the power to fulfill another | George Elliot |
+| It is amazing what you can accomplish if you do not care who gets the credit | Harry S Truman |
