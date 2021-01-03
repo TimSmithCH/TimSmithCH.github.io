@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css"/>
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Javascript -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'
     <style>
 .jumbotron-image {
   background-image: url("assets/WeissMattHer.jpg");
@@ -48,26 +51,26 @@ $(document).ready(function() {
     </div>
 
     <nav class="navbar navbar-expand-sm sticky-top bg-sb navbar-light">
-      <a class="navbar-brand" href="#"><img src="assets/logo.png" width="30" height="30" alt="Tim"></a>
+      <a class="navbar-brand" href="#"><img src="../assets/logo.png" width="30" height="30" alt="Tim"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 	<span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html#Bio">Bio</a>
+            <a class="nav-link" href="../index.html#Bio">Bio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#Responsibilities">Responsibilities</a>
+            <a class="nav-link" href="../index.html#Responsibilities">Responsibilities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#Outreach">Outreach</a>
+            <a class="nav-link" href="../index.html#Outreach">Outreach</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#Contact">Contact</a>
+            <a class="nav-link" href="../index.html#Contact">Contact</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link btn btn-outline-success" href="publications.html">Publications</a>
+            <a class="nav-link btn btn-outline-success" href="../publications.html">Publications</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -75,7 +78,7 @@ $(document).ready(function() {
             <a class="nav-link btn btn-outline-warning" href="commute/index.html">Commuting</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-warning" href="play/index.html">Play</a>
+            <a class="nav-link btn btn-outline-warning" href="index.html">Play</a>
           </li>
         </ul>
       </div>
@@ -181,7 +184,7 @@ $(document).ready(function() {
               // Scan full data file for countries where I've modified the note_adm0 field to "visited"
               map.addSource("visited", {
                 "type": "geojson",
-                "data": "https://tjs.web.cern.ch/tjs/play/geojson/ne_50m_admin_0_countries.geojson"
+                "data": "https://timsmithch.github.io/play/geojson/ne_50m_admin_0_countries.geojson"
               });
               map.addLayer({
                 "id": "visited",
