@@ -14,10 +14,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Javascript -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'>
     <style>
 .jumbotron-image {
-  background-image: url("../assets/WeissMattHer.jpg");
+  background-image: url("/assets/WeissMattHer.jpg");
   background-size: cover;
   color: #fff;
   margin-bottom:0;
@@ -51,7 +51,7 @@ $(document).ready(function() {
     </div>
 
     <nav class="navbar navbar-expand-sm sticky-top bg-sb navbar-light">
-      <a class="navbar-brand" href="#"><img src="../assets/logo.png" width="30" height="30" alt="Tim"></a>
+      <a class="navbar-brand" href="#"><img src="/assets/logo.png" width="30" height="30" alt="Tim"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 	<span class="navbar-toggler-icon"></span>
       </button>
@@ -75,7 +75,7 @@ $(document).ready(function() {
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-warning" href="commute/index.html">Commuting</a>
+            <a class="nav-link btn btn-outline-warning" href="/commute/index.html">Commuting</a>
           </li>
         </ul>
       </div>
@@ -83,56 +83,62 @@ $(document).ready(function() {
 
     <div class="container bg-1 py-3 text-center" id="Title">
       <h3>Mapping various play time activities</h3>
-          <div class="div-table">
-            <div class="tr">
-              <div class="tc">
-                <a href="/MapTracks"><img src="images/TrackMap.png" alt="Pho" height="216" width="341">
-                  <div class="transbox">
-                    <p>Tracks Mapped</p>
-                  </div>
-                </a>
-              </div>
-              <div class="tc">
-                <a href="#Travel"><img src="images/Travel.png" alt="Pho" height="216" width="341">
-                  <div class="transbox">
-                    <p>Visited</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="tc">
-                <a href="/play/Trips.html"><img src="images/Adventures.png" alt="Pho" height="216" width="341">
-                  <div class="transbox">
-                    <p>Trip Maps</p>
-                  </div>
-                </a>
-              </div>
-              <div class="tc">
-                <a href="/play/Heat.html"><img src="images/Heat.png" alt="Pho" height="216" width="341">
-                  <div class="transbox">
-                    <p>Heat Maps</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="tc">
-                <a href="/play/Flying.html"><img src="images/Flying.png" alt="Pho" height="216" width="341">
-                  <div class="transbox">
-                    <p>Flying Maps</p>
-                  </div>
-                </a>
-              </div>
-              <div class="tc">
-                <a href="/cern/cern.html"><img src="images/CERN.png" alt="Pho" height="216" width="216">
-                  <div class="transbox">
-                    <p>Map of CERN</p>
-                  </div>
-                </a>
-              </div>
-            </div>
+
+      <div class="card-deck my-3">
+        <div class="card">
+          <div class="card-header">
+            Tracks Mapped
           </div>
+          <div class="card-body">
+            <a href="/MapTracks"><img src="images/TrackMap.png" alt="Pho" height="216" width="341"></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Visited
+          </div>
+          <div class="card-body">
+            <a href="#Travel"><img src="images/Travel.png" alt="Pho" height="216" width="341"></a>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck my-3">
+        <div class="card">
+          <div class="card-header">
+            Trip Maps
+          </div>
+          <div class="card-body">
+            <a href="/play/Trips.html"><img src="images/Adventures.png" alt="Pho" height="216" width="341"></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Heat Maps
+          </div>
+          <div class="card-body">
+            <a href="/play/Heat.html"><img src="images/Heat.png" alt="Pho" height="216" width="341"></a>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck my-3">
+        <div class="card">
+          <div class="card-header">
+            Flaying Maps
+          </div>
+          <div class="card-body">
+            <a href="/play/Flying.html"><img src="images/Flying.png" alt="Pho" height="216" width="341"></a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Map of CERN
+          </div>
+          <div class="card-body">
+            <a href="/cern/cern.html"><img src="images/CERN.png" alt="Pho" height="216" width="216"></a>
+          </div>
+        </div>
+      </div>
+
           <hr>
           
           <h1 id="Travel">Travel Record</h1>
