@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tim Smith</title>
+    <meta name="description" content="A home page for Tim">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/divtable.css">
+  </head>
+
+  <body>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <a href="/" class="logo">
+          <img src="/assets/logo.png" alt="Tim">
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link"><a href="/work/">Work</a>
+            <li class="nav-link"><a href="/commute/">Commute</a>
+            <li class="nav-link"><a href="/play/">Play</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="home">
+        <div class="wrapper">
+          <h1>Mapping various play time activities</h1>
+          <div class="div-table">
+            <div class="tr">
+              <div class="tc">
+                <a href="/MapTracks"><img src="images/TrackMap.png" alt="Pho" height="216" width="341">
+                  <div class="transbox">
+                    <p>Tracks Mapped</p>
+                  </div>
+                </a>
+              </div>
+              <div class="tc">
+                <a href="#Travel"><img src="images/Travel.png" alt="Pho" height="216" width="341">
+                  <div class="transbox">
+                    <p>Visited</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="tc">
+                <a href="/play/Trips.html"><img src="images/Adventures.png" alt="Pho" height="216" width="341">
+                  <div class="transbox">
+                    <p>Trip Maps</p>
+                  </div>
+                </a>
+              </div>
+              <div class="tc">
+                <a href="/play/Heat.html"><img src="images/Heat.png" alt="Pho" height="216" width="341">
+                  <div class="transbox">
+                    <p>Heat Maps</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="tc">
+                <a href="/play/Flying.html"><img src="images/Flying.png" alt="Pho" height="216" width="341">
+                  <div class="transbox">
+                    <p>Flying Maps</p>
+                  </div>
+                </a>
+              </div>
+              <div class="tc">
+                <a href="/cern/cern.html"><img src="images/CERN.png" alt="Pho" height="216" width="216">
+                  <div class="transbox">
+                    <p>Map of CERN</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          
+          <h1 id="Travel">Travel Record</h1>
+          <div id='map' style='width: 864px; height: 550px;'></div>
+
+          <script>
+            // MapBox layer filter doesnt accepted an array, so build an arguement string
+            function buildFilter() {
+              var arr = ["Andorra", "Argentina", "Australia", "Austria",
+                         "Belgium", "Bolivia",
+                         "Canada", "Chile", "Czechia",
+                         "Denmark",
+                         "Egypt",
+                         "Finland", "France",
+                         "Germany", "Greece", "Guernsey",
+                         "Hungary",
+                         "Iceland", "Ireland", "Italy",
+                         "Japan", "Jersey","Jordan",
+                         "Kenya",
+                         "Latvia", "Liechtenstein", "Lithuania", "Luxembourg",
+                         "Mexico", "Mongolia",
+                         "Nepal", "Netherlands", "Norway",
+                         "Poland", "Portugal",
+                         "Spain", "Sweden", "Switzerland",
+                         "Tanzania", "Turkey",
+                         "United Kingdom", "United States of America"];
+              var filter = ['in', 'NAME'];
+              for(var i = 0; i < arr.length; i += 1) {
+                filter.push(arr[i]);
+              }
+              return filter;
+            }
+            
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [20.0, 30.0], // starting position
+              zoom: 1 // starting zoom
+            });
+            
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+            
+            map.on('load', function () {
+              // Scan full data file for countries where I've modified the note_adm0 field to "visited"
+              map.addSource("visited", {
+                "type": "geojson",
+                "data": "https://tjs.web.cern.ch/tjs/play/geojson/ne_50m_admin_0_countries.geojson"
+              });
+              map.addLayer({
+                "id": "visited",
+                "type": "fill",
+                "source": "visited",
+                "filter": buildFilter(),
+                "paint": {
+                  "fill-outline-color": "#484896",
+                  "fill-color": {
+                    property: 'MAPCOLOR7',
+                    stops: [
+                      [1, '#e6194b'],
+                      [2, '#3cb44b'],
+                      [3, '#ffe119'],
+                      [4, '#0082c8'],
+                      [5, '#f58231'],
+                      [6, '#911eb4'],
+                      [7, '#46f0f0']
+                    ]
+                  },
+                  "fill-opacity": 0.75
+                }
+              });
+            });
+          </script>
+          
+          <p>Country data Thanks to <a href="http://www.naturalearthdata.com">Natural Earth</a></p>
+          <p>A grand total of 41/197 soverign states visited!</p>
+          <h1>Further Reading</h1>
+          <a href="/play/Escalades.html">Escalades</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <h3 class="footer-heading">Tim</h3>
+        <div class="site-navigation">
+          <p><strong>Site Map</strong></p>
+          <ul class="pages">
+            <li class="nav-link"><a href="/work/">Work</a>
+            <li class="nav-link"><a href="/comms/">Comms</a>
+            <li class="nav-link"><a href="/play/">Play</a>
+          </ul>
+        </div>
+        <div class="site-contact">
+          <p><strong>Contact</strong>
+          <ul class="social-media-list">
+            <li>
+              <a href="mailto:tim.smith@cern.ch">
+                <i class="fa fa-envelope-o"></i>
+                <span class="username">tim.smith@cern.ch</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/TimSmithCH" title="Follow me on Twitter">
+                <i class="fa fa-twitter"></i>
+                <span class="username">@TimSmithCH</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/TimSmithCH" title="Fork me on GitHub">
+                <i class="fa fa-github"></i>
+                <span class="username">TimSmithCH</span>
+              </a>
+            </li>
+            <li>
+            <a href="https://ch.linkedin.com/pub/tim-smith/33/b74/751" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Tim Smith</span>
+            </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-signature">
+          <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
