@@ -13,7 +13,7 @@
             },
             "properties": {
                 "name": "Keflavik Airport",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -28,7 +28,7 @@
             },
             "properties": {
                 "name": "Blue Lagoon",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -43,7 +43,7 @@
             },
             "properties": {
                 "name": "Seltún Geothermal Area",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -58,7 +58,7 @@
             },
             "properties": {
                 "name": "Seljalandsfoss",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -73,7 +73,7 @@
             },
             "properties": {
                 "name": "Skógafoss",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -88,7 +88,7 @@
             },
             "properties": {
                 "name": "Dyrhólaey",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -103,7 +103,7 @@
             },
             "properties": {
                 "name": "Reynisfjara Beach",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -118,7 +118,7 @@
             },
             "properties": {
                 "name": "Sólheimajökull Glacier",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -133,7 +133,7 @@
             },
             "properties": {
                 "name": "Secret Lagoon, Flúðir",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -148,7 +148,7 @@
             },
             "properties": {
                 "name": "Gullfoss",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -163,7 +163,7 @@
             },
             "properties": {
                 "name": "Strokkur Geyser",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -178,7 +178,7 @@
             },
             "properties": {
                 "name": "Ljósufjöll",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -193,7 +193,7 @@
             },
             "properties": {
                 "name": "Arnarstapi",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -208,7 +208,7 @@
             },
             "properties": {
                 "name": "Rauðfeldsgjá Gorge",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -223,7 +223,7 @@
             },
             "properties": {
                 "name": "Rauðfeldsgjá Gorge",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -238,7 +238,7 @@
             },
             "properties": {
                 "name": "Kirkjufell",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -253,7 +253,7 @@
             },
             "properties": {
                 "name": "Nauthólsvík Geothermal Beach",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -268,7 +268,7 @@
             },
             "properties": {
                 "name": "Hallgrimskirkja",
-                "icon": "marker"
+                "icon": "star"
             }
         },
         {
@@ -290,8 +290,7 @@
             },
             "properties": {
                 "name": "To Geneva",
-                "stroke": "#f96f04",
-                "dashstyle": [2, 2]
+                "stroke": "#ce93d8"
             }
         }
     ]
