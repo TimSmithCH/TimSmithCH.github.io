@@ -64,6 +64,66 @@
         {
             "type": "Feature",
             "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -19.5096826,
+                    63.5390855,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Skógafoss",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -19.1063762,
+                    63.4072158,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Dyrhólaey",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -19.0746124,
+                    63.4065419,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Reynisfjara Beach",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -19.3693626,
+                    63.5303565,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Sólheimajökull Glacier",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
