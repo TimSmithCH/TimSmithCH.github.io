@@ -124,6 +124,156 @@
         {
             "type": "Feature",
             "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -20.3050288,
+                    64.1383475,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Secret Lagoon, Flúðir",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -20.0962516,
+                    64.3364489,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Gullfoss",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -20.2784182,
+                    64.3186940,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Strokkur Geyser",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -22.2376536,
+                    64.8708334,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Ljósufjöll",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -23.6260243,
+                    64.7691725,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Arnarstapi",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -23.6359995,
+                    64.8009615,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Rauðfeldsgjá Gorge",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -23.6359995,
+                    64.8009615,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Rauðfeldsgjá Gorge",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -23.3068620,
+                    64.9436758,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Kirkjufell",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -21.9324175,
+                    64.1215448,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Nauthólsvík Geothermal Beach",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -21.9031246,
+                    64.1485839,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Hallgrimskirkja",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
