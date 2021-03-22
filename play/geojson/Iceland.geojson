@@ -4,6 +4,66 @@
         {
             "type": "Feature",
             "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -22.6194903,
+                    63.9891561,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Keflavik Airport",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -22.4499615,
+                    63.8791207,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Blue Lagoon",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -22.0471373,
+                    63.8967803,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Seltún Geothermal Area",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -19.8910226,
+                    63.6439723,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Seljalandsfoss",
+                "icon": "marker"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
