@@ -34,3 +34,5 @@
 | Discovery consists of seeing what everyone has seen, but thinking what no one has thought.. | Albert Szent-Gyorgyi |
 | The reward of one duty is the power to fulfill another | George Elliot |
 | It is amazing what you can accomplish if you do not care who gets the credit | Harry S Truman |
+| from each according to their abilities, to each according to their needs | Karl Marx |
+| It doesn't make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to | Steve Jobs |
