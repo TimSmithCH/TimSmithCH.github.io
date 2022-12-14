@@ -38,3 +38,4 @@
 | It doesn't make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to | Steve Jobs |
 | In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual | Isaac Newton |
 | Where is the knowledge we have lost in information? |T. S. Eliot, the Rock (1934)|
+| Computers are useless – they can only give you answers | Pablo Picasso |
