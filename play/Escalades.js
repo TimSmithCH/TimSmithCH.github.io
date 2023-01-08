@@ -27,7 +27,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .attr('y', 6)
       .attr('dy', '.71em')
       .style('text-anchor', 'end')
-      .text('Time (m:s)');
+      .text('Time (mm:ss)');
 }
 
 function addYear(domain) {
