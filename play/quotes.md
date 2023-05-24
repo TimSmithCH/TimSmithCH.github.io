@@ -39,3 +39,4 @@
 | In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual | Isaac Newton |
 | Where is the knowledge we have lost in information? |T. S. Eliot, the Rock (1934)|
 | Computers are useless – they can only give you answers | Pablo Picasso |
+| Common sense is the collection of prejudices acquired by age eighteen | Einstein|
