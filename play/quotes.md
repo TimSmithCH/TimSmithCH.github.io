@@ -40,3 +40,4 @@
 | Where is the knowledge we have lost in information? |T. S. Eliot, the Rock (1934)|
 | Computers are useless – they can only give you answers | Pablo Picasso |
 | Common sense is the collection of prejudices acquired by age eighteen | Einstein|
+| Nothing is too wonderful to be true, if it be consistent with the laws of nature | Michael Faraday |
