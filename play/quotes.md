@@ -41,3 +41,4 @@
 | Computers are useless – they can only give you answers | Pablo Picasso |
 | Common sense is the collection of prejudices acquired by age eighteen | Einstein|
 | Nothing is too wonderful to be true, if it be consistent with the laws of nature | Michael Faraday |
+| Men and nations do act wisely when they have exhausted all the other possibilities | Abba Eban |
