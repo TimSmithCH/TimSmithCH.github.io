@@ -18,5 +18,10 @@
     "date": "2014-12-06",
     "type": "Client",
     "version": "Hom IV"
+  },
+  {
+    "date": "2025-12-06",
+    "type": "Server",
+    "version": "Hom V"
   }
 ]
