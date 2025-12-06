@@ -1,4 +1,4 @@
-function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
+function addAxesAndLegend (svg, xAxis, yAxis, yRight, margin, chartWidth, chartHeight) {
   svg.append('clipPath')
     .attr('id', 'axes-clip')
     .append('polygon')
@@ -28,6 +28,11 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .attr('dy', '.71em')
       .style('text-anchor', 'end')
       .text('Time (mm:ss)');
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(" + chartWidth + " ,0)")
+    .call(yRight);
 }
 
 function addYear(domain) {
@@ -112,7 +117,7 @@ function startTransitions (svg, chartWidth, chartHeight, rectClip, markers, x) {
 function makeChart (data, markers) {
   var svgWidth  = 960,
       svgHeight = 500,
-      margin = { top: 20, right: 20, bottom: 40, left: 80 },
+      margin = { top: 20, right: 80, bottom: 40, left: 80 },
       chartWidth  = svgWidth  - margin.left - margin.right,
       chartHeight = svgHeight - margin.top  - margin.bottom;
 
@@ -120,10 +125,15 @@ function makeChart (data, markers) {
             .domain(d3.extent(data, function (d) { return d.date; })).nice(),
       y = d3.time.scale().range([chartHeight, 0])
             .domain(d3.extent(data, function (d) { return d.time; })).nice();
+      yr = d3.time.scale().range([chartHeight, 0])
+            .domain(d3.extent(data, function (d) { return d.pace; })).nice();
 
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
       yAxis = d3.svg.axis().scale(y).orient('left')
+                .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10)
+                .tickFormat(d3.time.format('%M:%S'));
+      yRight = d3.svg.axis().scale(yr).orient('right')
                 .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10)
                 .tickFormat(d3.time.format('%M:%S'));
 
@@ -141,13 +151,16 @@ function makeChart (data, markers) {
       .attr('width', 0)
       .attr('height', chartHeight);
 
-  addAxesAndLegend(svg, xAxis, yAxis, margin, chartWidth, chartHeight);
+  addAxesAndLegend(svg, xAxis, yAxis, yRight, margin, chartWidth, chartHeight);
   drawPaths(svg, data, x, y);
   startTransitions(svg, chartWidth, chartHeight, rectClip, markers, x);
 }
 
 var parseDate  = d3.time.format('%Y-%m-%d').parse;
 var parseTime  = d3.time.format('%H:%M:%S').parse;
+//var formatTime = d3.time.format('%H:%M:%S');
+//var parsePace  = function(d) { return formatTime(new Date(2012, 0, 1, 0, 0, ((Date.parse(d).getMinutes*60)+Date.parse(d).getSeconds)/7.4)) };
+var parsePace  = d3.time.format('%H:%M:%S').parse;
 d3.json('Escalades.json', function (error, rawData) {
   if (error) {
     console.error(error);
@@ -157,7 +170,8 @@ d3.json('Escalades.json', function (error, rawData) {
   var data = rawData.map(function (d) {
     return {
       date:  parseDate(d.date),
-      time:  parseTime(d.time)
+      time:  parseTime(d.time),
+      pace:  parsePace(d.pace)
     };
   });
 
